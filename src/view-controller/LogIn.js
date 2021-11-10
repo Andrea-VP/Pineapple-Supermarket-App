@@ -1,7 +1,10 @@
 import logo from '../logo.svg';
 import '../App.css';
+import {boton} from '../functions/functions'
 
-function App() {
+
+
+function LogIn() {
   return (
     <div className="App">
       <header className="App-header">
@@ -15,11 +18,12 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Vista Iniciar sesión Supermarket
+          Hola vista Log In
         </a>
+        <button onClick={boton}>Click aquí</button>
       </header>
     </div>
   );
 }
 
-export default App;
+export default LogIn;
