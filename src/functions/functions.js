@@ -1,8 +1,10 @@
 // Vista log In
-function boton (){
-    console.log('Presionando version 2')
+function enviar (){
+    //console.log('Presionando version 2')
+    let input = document.querySelector("#name")
+    console.log(input.value)
 }
 
 module.exports = {
-    boton
+    enviar
 }
