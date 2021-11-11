@@ -16,7 +16,7 @@ function LogIn() {
         </label>
         <button onClick={enviar} type="submit">Enviar</button> 
         
-        <label> 
+        <label>
           Contraseña:
           <input type="password" name="password" id="password"/> 
         </label>
