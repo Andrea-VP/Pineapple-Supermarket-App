@@ -32,7 +32,7 @@ function LogIn() {
         <button ></button> 
         </form>
         <div>
-          {users.map(user=><li>{user}</li>)}
+          {users.map(user=><li key={user}>{user}</li>)}
         </div>
       </header>
     </div>
