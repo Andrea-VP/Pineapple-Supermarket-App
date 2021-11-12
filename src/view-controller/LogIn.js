@@ -1,10 +1,18 @@
 //import logo from '../logo.svg';
 import '../App.css';
 import {send} from '../functions/functions'
-
+import React, {useState, useEffect} from "react";
 
 
 function LogIn() {
+  const [users, setUsers] = useState([]);
+  useEffect(()=>{
+    fetch("/users/").then(res=>{
+      if(res.ok){
+        return res.json()
+      }
+    }).then(jsonRes=>setUsers(jsonRes.userList))
+  })
   return (
     <div className="App">
       <header className="App-header">
@@ -23,6 +31,9 @@ function LogIn() {
         <button onClick={send} type="submit">Ingresar</button>
         <button ></button> 
         </form>
+        <div>
+          {users.map(user=><li>{user}</li>)}
+        </div>
       </header>
     </div>
   );
