@@ -5,6 +5,7 @@ function send(){
     console.log(input.value)
 }
 
+//Vista AccountRegister
 function create (e){ 
     e.preventDefault()
     console.log('Presionando version 2')
