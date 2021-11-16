@@ -5,6 +5,8 @@ import {
 } from 'react-router-dom';
 import AccountRegister from './view-controller/AccountRegister';
 import LogIn from './view-controller/LogIn'
+import ProductsV from './view-controller/ProductsViewer';
+import ProductsA from './view-controller/ProductsAdmin';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Switch>
         <Route exact path="/" component={LogIn}/>
         <Route exact path="/account" component={AccountRegister}></Route>
+        <Route exact path="/productsv"component={ProductsV}></Route>
+        <Route exact path="/productsa"component={ProductsA}></Route>
       </Switch>
     </Router>
   );

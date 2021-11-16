@@ -8,7 +8,6 @@ function send(){
 //Vista AccountRegister
 function create (e){ 
     e.preventDefault()
-    console.log('Presionando version 2')
     let input = document.querySelectorAll(".register")
     input.forEach((i)=>{
         console.log(i.value)
@@ -16,17 +15,33 @@ function create (e){
 }
 
 function edit (){
-    //console.log('Presionando version 2')
     let input = document.querySelectorAll(".register")
-    console.log(input.value)
+    input.forEach((i)=>{
+        console.log(i.value)
+    })
 }
 
 function erase (){
-    //console.log('Presionando version 2')
     let input = document.querySelectorAll(".register")
-    console.log(input.value)
+    input.forEach((i)=>{
+        console.log(i.value)
+    })
+}
+
+//vista ProductsViewer
+
+function alphSort(){
+    console.log("Ordenando por nombre")
+}
+
+function numSort(){
+    console.log("Ordenando por precio")
+}
+
+function exportXLS(){
+    console.log("creando documento de excel")
 }
 
 module.exports = {
-    send,create,edit,erase
+    send,create,edit,erase,alphSort, numSort, exportXLS
 }
