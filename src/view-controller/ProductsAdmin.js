@@ -2,22 +2,29 @@
 import '../App.css';
 import {alphSort, numSort, exportXLS} from '../functions/functions'
 //import {render} from '../functions/modalAddProduct'
+import React, { useState } from 'react';
+import Modal from "../Components/Modal";
+
 
 function ProductsA() {
+  const [openModal, setOpenModal] = useState(false);
+
     return (
     <div className="App">
       <header className="App-header">
         <h1>Productos</h1>
-        </header>
-        {/*<button type="button" id="modalAdd" onClick={render}>Añadir producto</button>*/}
-        <button type="button" id="modalAdd">Añadir producto</button>
-        <button type="button">Editar producto</button> 
-        <input type="search" placeholder="Buscar"></input>
-        <label>Ordenar por:</label>
-        <button onClick={alphSort} type="button">Nombre</button>
-        <button onClick={numSort} type="button">Precio</button>
-        <section> 
+      </header>
+      <section> 
+          <button className="openModalBtn" onClick={() =>{setOpenModal(true);} }>Añadir producto</button>
+          {openModal && <Modal closeModal={setOpenModal}/>}
+          {/*openModal && <Modal closeModal={setOpenModal} />*/}
+          <button type="button">Editar producto</button> 
+          <input type="search" placeholder="Buscar"></input>
+          <label>Ordenar por:</label>
+          <button onClick={alphSort} type="button">Nombre</button>
+          <button onClick={numSort} type="button">Precio</button>
         <table>
+        <tbody>
           <tr>
             <th>Nombre</th>
             <th>Categoría</th>
@@ -32,8 +39,9 @@ function ProductsA() {
             <td>Fideos 500 gr</td>
             <td>20</td>
             <td>1 usd</td>
-            <td><img></img></td>
+            <td><img alt="for sell"></img></td>
           </tr>
+          </tbody>
         </table>
       </section>
       <button onClick={exportXLS} type="button">Exportar .xls</button>

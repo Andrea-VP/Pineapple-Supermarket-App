@@ -28,7 +28,7 @@ function ProductsV() {
             <td>Fideos 500 gr</td>
             <td>20</td>
             <td>1 usd</td>
-            <td><img></img></td>
+            <td><img alt="for sell"></img></td>
           </tr>
         </table>
       </section>
