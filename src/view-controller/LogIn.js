@@ -1,6 +1,6 @@
 //import logo from '../logo.svg';
 import '../App.css';
-import {enviar} from '../functions/functions'
+import {send} from '../functions/functions'
 
 
 
@@ -12,14 +12,16 @@ function LogIn() {
         <form>
         <label>
           Nombre:
-          <input type="text" name="name" id="name"/> 
+          <input required type="text" name="name" id="name"/> 
         </label>
-        <button onClick={enviar} type="submit">Enviar</button> 
-        
-        <label>
+        <br/>
+        <label> 
           Contraseña:
-          <input type="password" name="password" id="password"/> 
+          <input required type="password" name="password" id="password"/> 
         </label>
+        <br/>
+        <button onClick={send} type="submit">Ingresar</button>
+
         </form>
       </header>
     </div>
