@@ -11,7 +11,7 @@
   }
   
   .modalContainer {
-    width: 500px;
+    width: 650px;
     height: 500px;
     border-radius: 12px;
     background-color: white;
@@ -41,7 +41,10 @@
     background: #FFB400;
   }
   
-  
+  .editForm{
+    display: flex;
+  }
+
   .modalContainer .body {
     flex: 50%;
     justify-content: center;

@@ -1,9 +1,9 @@
 //import logo from '../logo.svg';
 import '../App.css';
 import {alphSort, numSort, exportXLS} from '../functions/functions'
-//import {render} from '../functions/modalAddProduct'
 import React, { useState } from 'react';
-import Modal from "../Components/Modal";
+import ModalAdd from "../Components/ModalAdd";
+import ModalEdit from "../Components/ModalEdit";
 
 
 function ProductsA() {
@@ -16,9 +16,9 @@ function ProductsA() {
       </header>
       <section> 
           <button className="openModalBtn" onClick={() =>{setOpenModal(true);} }>Añadir producto</button>
-          {openModal && <Modal closeModal={setOpenModal}/>}
-          {/*openModal && <Modal closeModal={setOpenModal} />*/}
-          <button type="button">Editar producto</button> 
+          {openModal && <ModalAdd closeModal={setOpenModal}/>}
+          <button className="openModalBtn" onClick={() =>{setOpenModal(true);} }>Editar producto</button>
+          {openModal && <ModalEdit closeModal={setOpenModal}/>}
           <input type="search" placeholder="Buscar"></input>
           <label>Ordenar por:</label>
           <button onClick={alphSort} type="button">Nombre</button>

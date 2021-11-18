@@ -37,9 +37,9 @@ function AccountRegister() {
         <br/>
         <label>
             Rol:
-            <select className="register" required size="2" name="role">
+            <select className="register" required size="" name="role">
+              <option>Usuario estándar</option> 
                 <option>Administrador</option> 
-                <option>Usuario estándar</option>    
             </select> 
         </label>
         <br/>

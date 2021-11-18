@@ -1,7 +1,7 @@
 import React from "react";
-import './Modal.css';
+import './ModalAdd.css';
 
-function Modal({ closeModal }) {
+function ModalAdd({ closeModal }) {
   return (
     <div className ="modalBackground">
       <div className="modalContainer">
@@ -9,7 +9,7 @@ function Modal({ closeModal }) {
             <button onClick={() => closeModal(false)}> X </button>
           </div>
           <div className="title">
-           <h1>Información de Producto</h1>
+           <h1>Añadir Producto</h1>
           </div>
           <div className="body">
           <form>
@@ -25,7 +25,8 @@ function Modal({ closeModal }) {
                 <option>Verduras</option>
                 <option>Carnes</option>
                 <option>Lácteos</option>
-                <option>Deporte</option>   
+                <option>Deporte</option>
+                <option>Harinas</option>   
               </select> 
             </label>
             <br/>
@@ -46,7 +47,7 @@ function Modal({ closeModal }) {
             <br/>
             <label>
               Subir Imagen:
-              <input className="" required type="" name="" id=""/> 
+              <input className="" required type="file" name="" id=""/> 
             </label>
             <br/>
             <br/>
@@ -54,7 +55,7 @@ function Modal({ closeModal }) {
           </form>
           <div className="footer">
             <button onClick={() => closeModal(false)} id="cancelBtn">Cancel</button>
-            <button>Guardar</button>
+            <button>Añadir</button>
           </div>
        </div>
       </div>
@@ -62,5 +63,5 @@ function Modal({ closeModal }) {
   );
 }
 
-export default Modal;
+export default ModalAdd;
 
