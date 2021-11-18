@@ -8,6 +8,7 @@ function AccountRegister() {
     <div className="App">
       <header className="App-header">
        <h1>Registrar</h1>
+       </header>
         <form>
         <label>
           Nombre de usuario:
@@ -36,9 +37,9 @@ function AccountRegister() {
         <br/>
         <label>
             Rol:
-            <select className="register" required size="2" name="role">
+            <select className="register" required size="" name="role">
+              <option>Usuario estándar</option> 
                 <option>Administrador</option> 
-                <option>Usuario estándar</option>    
             </select> 
         </label>
         <br/>
@@ -46,7 +47,18 @@ function AccountRegister() {
         <button onClick={edit} type="submit">Editar</button> 
         <button onClick={erase} type="submit">Eliminar</button> 
         </form>
-      </header>
+      <section> 
+        <table>
+          <tr>
+            <th>Usuario</th>
+            <th>Fecha de creación</th>
+          </tr>
+          <tr>
+            <td>John</td>
+            <td>15/11/2021</td>
+          </tr>
+        </table>
+      </section>
     </div>
   );
 }

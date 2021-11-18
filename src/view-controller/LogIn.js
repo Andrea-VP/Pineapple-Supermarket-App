@@ -2,10 +2,8 @@
 import '../App.css';
 import {send} from '../functions/functions'
 
-
-
 function LogIn() {
-  return (
+    return (
     <div className="App">
       <header className="App-header">
        <h1>Iniciar Sesión</h1>
@@ -23,7 +21,7 @@ function LogIn() {
         <button onClick={send} type="submit">Ingresar</button>
 
         </form>
-      </header>
+        </header>
     </div>
   );
 }
