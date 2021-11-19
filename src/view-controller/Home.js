@@ -1,9 +1,11 @@
 //import logo from '../logo.svg';
 import '../App.css';
+import Navbar from '../Components/Navbar';
 
 function Home() {
   return (
     <div className="App">
+      <Navbar />
       <header className="App-header">
         <h1>Pineapple Supermarket</h1>
       </header>

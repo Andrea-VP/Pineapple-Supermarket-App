@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Revalia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Revalia&display=swap');
 
 .Navbar {
     position:sticky;    /*sticky header*/
@@ -36,16 +37,18 @@
     justify-content: space-between;
     color:black;
     padding: 20px 5% 20px 10px;
-    font-size: 25px;
+    font-size: 20px;
+    font-family: 'Revalia', cursive;
 }
 
-.Navbar .rightSide .link{
+.Navbar .rightSide :link{
     max-width: 80px;
+    text-decoration: none;
 }
 
-.Navbar .rightSide .links a{
+.Navbar .rightSide :hover {
     text-decoration: none;
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     margin-left: 15px;
 }
