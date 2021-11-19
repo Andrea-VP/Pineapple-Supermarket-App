@@ -5,7 +5,7 @@ import {send} from '../functions/functions'
 function LogIn() {
     return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header">  
        <h1>Iniciar Sesión</h1>
         <form>
         <label>
