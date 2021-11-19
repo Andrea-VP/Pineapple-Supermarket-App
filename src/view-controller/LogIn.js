@@ -1,5 +1,5 @@
 //import logo from '../logo.svg';
-import '../App.css';
+import './Login.css'
 import {send} from '../functions/functions'
 
 function LogIn() {
@@ -8,18 +8,13 @@ function LogIn() {
       <header className="App-header">  
        <h1>Iniciar Sesión</h1>
         <form>
-        <label>
-          Nombre:
-          <input required type="text" name="name" id="name"/> 
-        </label>
-        <br/>
-        <label> 
-          Contraseña:
-          <input required type="password" name="password" id="password"/> 
-        </label>
-        <br/>
+          <input required type="text" name="name" id="name" placeholder="Username"/>
+
+          <input required type="password" name="password" id="password" placeholder="Password"/>
+
+
         <button onClick={send} type="submit">Ingresar</button>
-        <button ></button> 
+
         </form>
         </header>
     </div>
