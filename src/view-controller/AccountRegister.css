@@ -1,0 +1,56 @@
+.formRegister {
+  margin: 50px auto 20px auto;
+  width: 50%;
+  padding: 20px 35px;
+  background: #00a6ed;
+  color: #fff;
+
+  border-radius: 5px;
+}
+
+.formRegister .columns{
+  display: flex;
+
+  flex-wrap: wrap;
+
+}
+.columns input{
+  width: 270px;
+margin-right: 10px;
+border-radius: 5px;
+}
+.btns {
+  margin: 30px 0 0 0;
+  text-align: center;
+}
+.btns button {
+  margin: 10px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.btns button:hover{
+  border: 2px solid #fff;
+  color: #fff;
+}
+.cont-table table{
+  margin: 50px auto;
+  width: 80%;
+
+  border:1px solid #000;
+}
+.cont-table th, td{
+  width: 50%;
+   text-align: left;
+   border: 1px solid #000;
+}
+.btn-create{
+  background: #7fb800;
+}
+.btn-edit{
+  background: #ffb400;
+}
+.btn-delete{
+  background: #f6511d;
+}
