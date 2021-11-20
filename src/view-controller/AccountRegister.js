@@ -51,18 +51,30 @@ function AccountRegister() {
           </div>
         </form>
       </header>
-      <section className="cont-table">
-        <table>
-          <tr>
-            <th>Usuario</th>
-            <th>Fecha de creación</th>
-          </tr>
-          <tr>
-            <td>John</td>
-            <td>15/11/2021</td>
-          </tr>
-        </table>
-      </section>
+     <div className="container">
+        <div class="row">
+          <table class="table table-responsive table-hover table-striped">
+            <tr>
+              <thead>
+              <th>Usuario</th>
+              <th>Fecha de creación</th>
+              </thead>
+            </tr>
+            <tr>
+              <td>John</td>
+              <td>15/11/2021</td>
+            </tr>
+            <tr>
+              <td>John</td>
+              <td>15/11/2021</td>
+            </tr>
+            <tr>
+              <td>John</td>
+              <td>15/11/2021</td>
+            </tr>
+          </table>
+        </div>
+      </div>
     </div>
   );
 }
