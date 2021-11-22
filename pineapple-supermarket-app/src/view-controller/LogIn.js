@@ -1,29 +1,33 @@
 //import logo from '../logo.svg';
-import '../App.css';
+import './Login.css'
+import { useHistory } from 'react-router-dom';
+
 import {send} from '../functions/functions'
 
-
 function LogIn() {
+  const history = useHistory();
 
-  return (
-    <div className="App">
-      <header className="App-header">
+  function linkPage(){
+    history.push("/account")
+
+  }
+
+    return (
+    <div className="cont">
+      <header className="form form-login">
        <h1>Iniciar Sesión</h1>
         <form>
-        <label>
-          Nombre:
-          <input required type="text" name="name" id="name"/> 
-        </label>
-        <br/>
-        <label> 
-          Contraseña:
-          <input required type="password" name="password" id="password"/> 
-        </label>
-        <br/>
-        <button onClick={send} type="submit">Ingresar</button>
-        <button ></button> 
+
+
+          <input required type="text" name="name" id="name" placeholder="Username"/>
+
+          <input required type="password" name="password" id="password" placeholder="Password"/>
+
+
+        <button onClick={send(linkPage)} type="submit">Ingresar</button>
+
         </form>
-      </header>
+        </header>
     </div>
   );
 }
