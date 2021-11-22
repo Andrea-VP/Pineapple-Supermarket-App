@@ -4,8 +4,8 @@ import {send} from '../functions/functions'
 
 function LogIn() {
     return (
-    <div className="App">
-      <header className="App-header">  
+    <div className="cont">
+      <header className="form">
        <h1>Iniciar Sesión</h1>
         <form>
           <input required type="text" name="name" id="name" placeholder="Username"/>
