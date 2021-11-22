@@ -4,6 +4,8 @@ import {alphSort, numSort, exportXLS} from '../functions/functions'
 import React, { useState } from 'react';
 import ModalAdd from "../Components/ModalAdd";
 import ModalEdit from "../Components/ModalEdit";
+import NavbarProducts from '../Components/NavbarProducts';
+import Footer from '../Components/Footer';
 
 
 function ProductsA() {
@@ -11,6 +13,7 @@ function ProductsA() {
 
     return (
     <div className="">
+      <NavbarProducts />
       <header className="cont-products-viewer">
         <h1>Productos</h1>
         <section className="table-products">
@@ -50,7 +53,7 @@ function ProductsA() {
         </section>
         <button onClick={exportXLS} type="button">Exportar .xls</button>
       </header>
-
+      <Footer/> 
     </div>
   );
 }
