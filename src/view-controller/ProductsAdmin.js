@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import ModalAdd from "../Components/ModalAdd";
 import ModalEdit from "../Components/ModalEdit";
 import NavbarProducts from '../Components/NavbarProducts';
+import Footer from '../Components/Footer';
 
 
 function ProductsA() {
@@ -52,7 +53,7 @@ function ProductsA() {
         </section>
         <button onClick={exportXLS} type="button">Exportar .xls</button>
       </header>
-
+      <Footer/> 
     </div>
   );
 }

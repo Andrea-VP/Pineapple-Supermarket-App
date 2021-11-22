@@ -2,6 +2,7 @@
 import './ProductsViewer.css';
 import {alphSort, numSort, exportXLS} from '../functions/functions'
 import NavbarProducts from '../Components/NavbarProducts';
+import Footer from '../Components/Footer';
 
 function ProductsV() {
     return (
@@ -42,7 +43,7 @@ function ProductsV() {
         </section>
           <button onClick={exportXLS} type="button" className="btn-exportar">Exportar .xls</button>
       </header>
-
+      <Footer/> 
     </div>
   );
 }

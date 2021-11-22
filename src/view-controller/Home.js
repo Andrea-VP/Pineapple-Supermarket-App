@@ -1,6 +1,7 @@
 //import logo from '../logo.svg';
 import '../App.css';
 import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 
 function Home() {
   return (
@@ -40,7 +41,8 @@ function Home() {
           <h3>URL de Github:</h3>
           <h3><a href="">link</a></h3>
         </div>
-      </body>      
+      </body>
+      <Footer/>      
     </div>
   );
 }
