@@ -1,31 +1,74 @@
+import { postLogin } from '../service/postLogin';
+
+
 // Vista log In
-function send(){
+export function send(callback){
     //console.log('Presionando version 2')
-    let input = document.querySelector("#name")
-    console.log(input.value)
+    let email = document.querySelector("#name")
+    let password = document.querySelector("#password")
+
+    postLogin(email,password)
+    .then(()=>{ 
+        callback()
+    })
 }
 
-function create (e){ 
+//Vista AccountRegister
+export function create (e){ 
     e.preventDefault()
-    console.log('Presionando version 2')
+    let input = document.querySelectorAll(".register")
+    // input.forEach((i)=>{
+    //     console.log(i.value)
+    //     // console.log("dfgdfg", input[0].value)
+
+    // })
+
+   // console.log(Boolean(input[3].value))
+
+
+
+  const data =  {
+        username    : input[2].value ,
+        password    : input[5].value , 
+        email       : input[4].value,
+        name        : input[0].value ,
+        lastName    : input[2].value,
+        roles       : Boolean(input[3].value) 
+    }
+    console.log(data)
+
+    postLogin(data)
+
+
+}
+
+export function edit (){
+    let input = document.querySelectorAll(".register")
+    input.forEach((i)=>{
+        console.log(i.value)
+        
+    })
+}
+
+export function erase (){
     let input = document.querySelectorAll(".register")
     input.forEach((i)=>{
         console.log(i.value)
     })
 }
 
-function edit (){
-    //console.log('Presionando version 2')
-    let input = document.querySelectorAll(".register")
-    console.log(input.value)
+//vista ProductsViewer
+
+export function alphSort(){
+    console.log("Ordenando por nombre")
 }
 
-function erase (){
-    //console.log('Presionando version 2')
-    let input = document.querySelectorAll(".register")
-    console.log(input.value)
+export function numSort(){
+    console.log("Ordenando por precio")
 }
 
-module.exports = {
-    send,create,edit,erase
+export function exportXLS(){
+    console.log("creando documento de excel")
 }
+
+
