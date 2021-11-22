@@ -9,10 +9,13 @@ const {
 
 const saveUser = async (req, res, next) => {
     try {
-      const { email, password, roles } = req.body;
+      const { username, password, email, name ,lastName, roles } = req.body;
       const user = new User({
-        email: email,
+        username: username,
         password: password,
+        email: email,
+        name: name,
+        lastName: lastName,
         roles: roles,
       });
   
@@ -41,7 +44,7 @@ const saveUser = async (req, res, next) => {
       );
       res.status(200).send(finalResponse);
     } catch (error) {
-      return next(404);
+      return next('404');
     }
   }
 

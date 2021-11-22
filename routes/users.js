@@ -33,13 +33,13 @@ const initAdminUser = (app, next) => {
   const user = User.findOne({email:adminEmail});
   user.then((doc) => {
     if (doc) {
-      console.info('Usuario ya existe');
+      console.info('Administrador ya existe');
       return next(200);
     }
 
     const newUser = new User(adminUser);
     newUser.save();
-    console.info('El usuario ha sido creado');
+    console.info('El usuario administrador ha sido creado');
   })
     .catch((err) => {
       if (err !== 200) {
