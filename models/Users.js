@@ -1,4 +1,4 @@
-// const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 const { Schema, model } = require('mongoose');
 const mongoosePaginate = require('mongoose-paginate-v2');
 
@@ -37,31 +37,31 @@ const userSchema = new Schema({
       },
 });
 
-// userSchema.plugin(mongoosePaginate);
+userSchema.plugin(mongoosePaginate);
 
-// userSchema.pre('save', function(next){
-//   const user = this; //const
-//   if(!user.isModified('password')) return next()
+userSchema.pre('save', function(next){
+  const user = this; //const
+  if(!user.isModified('password')) return next()
 
-//   bcrypt.hash(user.password,10,(err, passwordHash) =>{
-//     err && next(err);
+  bcrypt.hash(user.password,10,(err, passwordHash) =>{
+    err && next(err);
 
-//     user.password = passwordHash;
-//     next();
-//   })
-// })
+    user.password = passwordHash;
+    next();
+  })
+})
 
-// userSchema.pre('findOneAndUpdate', function(next){
-//   const user = this; //const
-//   if(!user._update.$set.password) return next()
+userSchema.pre('findOneAndUpdate', function(next){
+  const user = this; //const
+  if(!user._update.$set.password) return next()
 
-//   bcrypt.hash(user._update.$set.password,10,(err, passwordHash) =>{
-//     err && next(err);
+  bcrypt.hash(user._update.$set.password,10,(err, passwordHash) =>{
+    err && next(err);
 
-//     user._update.$set.password = passwordHash;
-//     next();
-//   })
-// })
+    user._update.$set.password = passwordHash;
+    next();
+  })
+})
 
 
 
