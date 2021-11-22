@@ -1,11 +1,14 @@
 //import logo from '../logo.svg';
 import './ProductsViewer.css';
 import {alphSort, numSort, exportXLS} from '../functions/functions'
+import NavbarProducts from '../Components/NavbarProducts';
 
 function ProductsV() {
     return (
     <div className="">
+      <NavbarProducts/>
       <header className="cont-products-viewer">
+
         <h2>Productos</h2>
 
             <input type="search" placeholder="Buscar" className="inputsearch"></input>
