@@ -1,49 +1,30 @@
-const express = require("express");
-
-
 require('dotenv').config();
+const config = require('./config');
 
-const  {dbConnection}  = require("./database/config");
 
-
+const express = require("express");
+const  { dbConnection }  = require("./database/config");
+const routes = require('./routes');
 const app = express();
 
-//const routes = require("./routers");
+const { port, dbUrl, secret } = config;
 
-
+app.set('config', config);
 
 // Base de datos
 dbConnection();
 
-
-
-app.get("/",function(req, res){
-   res.send("Express here!")
-})
-
-//app.use("/users/", require("./routers/usersRoute"))
-
-//app.use('/auth', require("./routers/auth"))
-
 // console.log(process.env.PORT)
+// const port = parseInt(process.env.PORT)
 
 
-app.listen( 4000, function(){
-    console.log(`express server is running on port ${process.env.PORT}`);
-});
+routes(app, (err) => {
+    if (err) {
+      throw err;
+    }
 
-
-
-// routes(app, (err) => {
-//     if (err) {
-//       throw err;
-//     }
-  
-//     //app.use(errorHandler);
-  
-//     app.listen(port, () => {
-
-
-//         console.info(`express server is running on port ${process.env.PORT}`);
-//     });
-//   });
+    app.listen( port, function(){
+        console.log(`Express server is running on port ${port}`);
+    });
+    
+  });
