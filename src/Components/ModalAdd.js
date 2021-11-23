@@ -1,15 +1,17 @@
 import React from "react";
 import './ModalAdd.css';
 
-function ModalAdd({ closeModal }) {
+function ModalAdd({ closeModal1 }) {
   return (
     <div className ="modalBackground">
       <div className="modalContainer">
-         <div className="titleCloseBtn">
-            <button onClick={() => closeModal(false)}> X </button>
-          </div>
-          <div className="title">
-           <h1>Añadir Producto</h1>
+          <div className="container__tittle">
+            <div className="titleCloseBtn">
+                <button onClick={() => closeModal1(false)}> X </button>
+            </div>
+            <div className="title">
+                <h1>Añadir Producto</h1>
+            </div>  
           </div>
           <div className="body">
           <form>
@@ -54,7 +56,7 @@ function ModalAdd({ closeModal }) {
             {/*<button onClick={create} type="submit">Crear</button>  */}
           </form>
           <div className="footer">
-            <button onClick={() => closeModal(false)} id="cancelBtn">Cancel</button>
+            <button onClick={() => closeModal1(false)} id="cancelBtn">Cancel</button>
             <button>Añadir</button>
           </div>
        </div>

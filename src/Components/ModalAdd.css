@@ -21,11 +21,13 @@
     padding: 25px;
   }
 
-  .titleCloseBtn {
+  .container__tittle{
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row-reverse;
+    background: #FFB400;
+    width: 100%;
   }
-  
+
   .titleCloseBtn button {
     background-color: transparent;
     border: none;
@@ -35,10 +37,8 @@
 
   
   .modalContainer .title {
-    display: inline-block;
-    text-align: center;
-    margin-top: 10px;
-    background: #FFB400;
+    align-self: self-end; 
+    padding: 0 20%;
   }
   
   .editForm{

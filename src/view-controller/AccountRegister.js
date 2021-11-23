@@ -50,7 +50,7 @@ function AccountRegister() {
         </form>
       </header>
           
-      <div class="container">
+      <div className="container">
           <Table  responsive striped bordered hover>
             <thead>
               <tr>

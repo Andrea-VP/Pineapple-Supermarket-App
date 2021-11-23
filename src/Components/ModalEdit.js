@@ -5,11 +5,13 @@ function ModalEdit({ closeModal }) {
   return (
     <div className ="modalBackground">
       <div className="modalContainer">
-         <div className="titleCloseBtn">
-            <button onClick={() => closeModal(false)}> X </button>
-        </div>
-        <div className="title">
-            <h1>Editar Producto</h1>
+        <div className="container__tittle">
+          <div className="titleCloseBtn">
+              <button onClick={() => closeModal(false)}> X </button>
+          </div>
+          <div className="title">
+              <h1>Editar Producto</h1>
+          </div>  
         </div>
         <div className="body">
           <form className="editForm">
@@ -60,7 +62,7 @@ function ModalEdit({ closeModal }) {
           </form>
           <div className="footer">
             <button onClick={() => closeModal(false)} id="cancelBtn">Cancel</button>
-            <button>Añadir</button>
+            <button>Editar</button>
           </div>
        </div>
       </div>
