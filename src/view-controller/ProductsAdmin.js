@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import ModalAdd from "../Components/ModalAdd";
 import ModalEdit from "../Components/ModalEdit";
 import NavbarProducts from '../Components/NavbarProducts';
+import Table from 'react-bootstrap/Table'
 import Footer from '../Components/Footer';
 
 
@@ -16,7 +17,6 @@ function ProductsA() {
       <NavbarProducts />
       <header className="cont-products-viewer">
         <h1>Productos</h1>
-        <section className="table-products">
             <div className="btns-admin">
               <button className="openModalBtn" onClick={() => { setOpenModal(true); }}>Añadir producto</button>
               {openModal && <ModalAdd closeModal={setOpenModal} />}
@@ -29,9 +29,9 @@ function ProductsA() {
               <button onClick={alphSort} type="button">Nombre</button>
               <button onClick={numSort} type="button">Precio</button>
             </div>
-
-          <table>
-          <tbody>
+          <section className="table-products">
+          <Table  responsive striped bordered hover>
+            <thead>
             <tr>
               <th>Nombre</th>
               <th>Categoría</th>
@@ -40,6 +40,8 @@ function ProductsA() {
               <th>Precio Unitario</th>
               <th>Imagen</th>
             </tr>
+            </thead>
+            <tbody>
             <tr>
               <td>Fideos</td>
               <td>Harinas</td>
@@ -49,7 +51,7 @@ function ProductsA() {
               <td><img alt="for sell"></img></td>
             </tr>
             </tbody>
-          </table>
+          </Table>
         </section>
         <button onClick={exportXLS} type="button">Exportar .xls</button>
       </header>

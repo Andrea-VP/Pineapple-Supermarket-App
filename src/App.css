@@ -31,7 +31,7 @@ body {
 
 .App-header {
   background-color: #fff;
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,4 +50,31 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+.cont-team{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.member{
+  width:400px; 
+  margin: 15px;
+  text-align: center;
+}
+.member-card{
+  margin: 0 auto;
+  height: 390px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
+i{
+  color: #0D2C54;
+  font-size: 30px;
+  transition: all 0.5s linear;
+}
+i:hover{
+  color: #00A6ED;
+  box-shadow: 0 auto auto 0 rgba(0,0,0,0.2);
 }
