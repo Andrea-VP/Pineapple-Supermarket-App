@@ -2,61 +2,66 @@ import axios from 'axios';
 
 import { url } from "./App-Server.js";
 
-const getToken = localStorage.getItem('token');
+const token = localStorage.token
 
-
-export const postAuth = async (email, password) => {
-    const response = await fetch(`${url}/auth`, {
-        method: 'POST',
-        body:
-            JSON.stringify
-                ({
-                    email,
-                    password
-                }),
-        headers: { 'Content-Type': 'application/json' }
-    })
-    console.log("CUERPO", response);
-
-    const dataJSON = await response.json();
-
-    // return dataJSON
-    if (response.status === 200) {
-        return dataJSON;
-    } else if (response.status === 400) {
-        // throw new Error('error de acceso');
-        alert('Error de acceso')
-    }
-}
-
-
-export const createUser = async (data) => {
-
-    const result = await axios({
-
-        method: "POST",
+export const getUsers = async () => {
+    try {
+    const resp = await axios({
+        method: 'GET',
         url: `${url}/users`,
-        data,
         headers: {
+            Authorization: `Bearer ${token}`,
             'Content-Type': 'application/json',
-            Authorization: `Bearer ${localStorage.getItem('token')}`,
         }
     })
+    if (resp.status !== 200) {
+        return new Error('Error');
+      } 
+      
+      return resp;
+    } catch(err){
+        return err
+    }   
+}
 
-    console.log("HEADERS", result);
+export const editUser = async (objectEdit, userId) => {
+    try {
+        const resp = await axios({
+            method: 'PUT',
+            url: `${url}/users/${userId}`,
+            headers: {
+                Authorization: `Bearer ${token}`,
+                'Content-Type': 'application/json',
+            },
+            data:JSON.stringify(objectEdit),
+          });
+        return resp;
+    } catch (error) {
+        return error
+    }
 
-    return result
+}
+
+export const createUser = async (data) => {
+    const resp = await axios({
+        method: "POST",
+        url: `${url}/users`,
+        headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'application/json',
+        },
+        data,
+    })
+
+    return resp
 }
 
 export const signIn = async (data ) => {
-    const response = await axios({
-
+    const resp = await axios({
         method: "POST",
         url: `${url}/auth`,
-        data
+        data,
     })
 
-    console.log("signIn", response);
-
-    return response
+    return resp
 }

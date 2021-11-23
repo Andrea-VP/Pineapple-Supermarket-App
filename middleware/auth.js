@@ -18,7 +18,6 @@ module.exports = (secret) => (req, res, next) => {
   }
 
   jwt.verify(token, secret, (err, decodedToken) => {
-    console.log(decodedToken)
     if (err) {
       return next(403);
     }

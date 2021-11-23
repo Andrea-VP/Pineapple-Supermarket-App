@@ -1,5 +1,4 @@
-import { createUser, signIn } from '../service/functions';
-
+import { createUser, signIn, editUser } from '../service/functions';
 
 // Vista log In
 export function send(decode,callback){
@@ -17,8 +16,6 @@ export function send(decode,callback){
         localStorage.setItem('key', email.value)
 
         const decoded = decode(res.data.token);
-        console.log(decoded.roles.admin)
-
 
         callback(decoded.roles.admin)
     })
@@ -35,11 +32,9 @@ export function create (e){
     if(input[3].value === "SÍ"){
         booleanValue = true
     }
-
     if(input[3].value === "NO"){
         booleanValue = false
     }
-
 
     const data =  {
         username    : input[2].value ,
@@ -49,19 +44,38 @@ export function create (e){
         lastName    : input[1].value,
         roles       : {admin : booleanValue}
     }
-    console.log(data)
 
     createUser(data)
-
-
 }
 
-export function edit (){
+export async function edit(props){
+    let booleanValue
+    
+    // e.preventDefault()
     let input = document.querySelectorAll(".register")
-    input.forEach((i)=>{
-        console.log(i.value)
-        
-    })
+
+    if(input[3].value === "SÍ"){
+        booleanValue = true
+    }
+    if(input[3].value === "NO"){
+        booleanValue = false
+    }
+
+    const data =  {
+        username    : input[2].value ,
+        password    : input[5].value , 
+        email       : input[4].value,
+        name        : input[0].value ,
+        lastName    : input[1].value,
+        roles       : {admin : booleanValue}
+    }
+
+    let id = input[4].value
+
+    // editUser(data, id)
+
+
+    await editUser(data, id)
 }
 
 export function erase (){
