@@ -10,6 +10,7 @@ const {
 const saveUser = async (req, res, next) => {
     try {
       const { username, password, email, name ,lastName, roles } = req.body;
+
       const user = new User({
         username: username,
         password: password,
@@ -18,18 +19,18 @@ const saveUser = async (req, res, next) => {
         lastName: lastName,
         roles: roles,
       });
-  
+
       if (!validEmail(email)) {
+        console.log('validEmail')
         return next(400);
       }
-  
+
       if (!email || !password) {
-        return res.status(400).send({ message: "No hay password ni contraseña" });
+        return res.status(400).send({ message: "No hay email ni contraseña" });
       }
       if (password.length < 4) {
         return res.status(400).send("Contraseña inválida");
       }
-      // user.password = await user.encryptPassword(password);
   
       const userValidated = User.findOne({ email: email });
       userValidated.then((doc) => {

@@ -1,8 +1,8 @@
 const User = require('../models/Users');
-// const {
-//   requireAuth,
-//   requireAdmin,
-// } = require('../middleware/auth');
+const {
+  requireAuth,
+  requireAdmin,
+} = require('../middleware/auth');
 
 // const {
 //   getUsers, getUser, deleteuser, updateuser, saveUser,
@@ -57,8 +57,7 @@ module.exports = (app, next) => {
 
 //   app.get('/users/:uid', requireAuth, getUser);
 
-//   app.post('/users', requireAdmin, saveUser);
-    app.post('/users', saveUser);
+  app.post('/users',requireAdmin, saveUser);
 
 
 //   app.put('/users/:uid', requireAuth, updateuser);
