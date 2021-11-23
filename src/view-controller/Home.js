@@ -1,6 +1,8 @@
 //import logo from '../logo.svg';
 import '../App.css';
 import Navbar from '../Components/Navbar';
+import Card from 'react-bootstrap/Card';
+import Image from 'react-bootstrap/Image';
 import Footer from '../Components/Footer';
 
 function Home() {
@@ -9,76 +11,61 @@ function Home() {
       <Navbar />
       <header className="App-header">
         <h1>Pineapple Supermarket</h1>
-      </header>
-      <table class="table table-borderless">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-    </tr>
-  </tbody>
-</table>
         <div>
           <h2>Web Devs' Rockstars</h2>
           <h3>Integrantes:</h3>
-          <div className="flex-container">
-            <div>1
-            
+          <div className="cont-team">
+            <div className="member">
+            <Card className="member-card" style={{ width: '18rem' }}>
+                <Image src="https://avatars.githubusercontent.com/u/91690704?v=4" roundedCircle /> 
+                <Card.Body>
+                  <Card.Title>García Vélez Iraís Eréndira</Card.Title>
+                  <a target="_blank" href="https://www.linkedin.com/in/erendira-garciav/"><i class="fab fa-linkedin"></i></a>
+                </Card.Body>
+              </Card>
             </div>
-            <div>2</div>
+            <div className="member">
+              <Card className="member-card" style={{ width: '18rem' }}>
+                <Image src="https://avatars.githubusercontent.com/u/89095047?v=4" roundedCircle /> 
+                <Card.Body>
+                  <Card.Title>Roda López Melanie Elena</Card.Title>
+                  <a target="_blank" href="https://www.linkedin.com/in/Melanie-RodasLo"><i class="fab fa-linkedin"></i></a>
+                </Card.Body>
+              </Card>
+            </div>
+            <div className="member">
+              <Card className="member-card"style={{ width: '18rem' }}>
+                <Image src="https://avatars.githubusercontent.com/u/75837291?v=4" roundedCircle /> 
+                <Card.Body>
+                  <Card.Title>Sanchez Correa Carla Patricia</Card.Title>
+                  <a target="_blank" href="https://www.linkedin.com/in/carlasanchezcorrea/"><i class="fab fa-linkedin"></i></a>
+                </Card.Body>
+              </Card>
+            </div>
+            <div className="member">
+              <Card className="member-card" style={{ width: '18rem' }}>
+                <Image src="https://avatars.githubusercontent.com/u/53058216?v=4" roundedCircle /> 
+                <Card.Body>
+                  <Card.Title>Tello Huaripata Keyko Isabel</Card.Title>
+                  <a target="_blank" href="https://www.linkedin.com/in/isabel-tello-huaripata/"><i class="fab fa-linkedin"></i></a>
+                </Card.Body>
+              </Card>
+            </div>
+            <div className="member">
+              <Card className="member-card" style={{ width: '18rem' }}>
+                <Image src="https://avatars.githubusercontent.com/u/34204871?v=4" roundedCircle /> 
+                <Card.Body>
+                  <Card.Title>Vargas Pérez Andrea</Card.Title>
+                  <a target="_blank" href="https://www.linkedin.com/in/andrea-vargas-perez/"><i class="fab fa-linkedin"></i></a>
+                </Card.Body>
+              </Card>
+            </div>
           </div>
-          <div className="flex-container2">
-            <div>3</div>
-            <div>4</div>
-          </div>
-          <div className="flex-container3">
-            <div>5</div>
-          </div>
-
-          <table className="borderless">
-            <tbody>
-            <tr>
-              <td><img alt="Erendi"></img></td>
-              <td><img alt="Mel"></img></td>
-            </tr>
-            <tr>
-              <th>García Vélez Iraís Eréndira</th>
-              <th>Roda López Melanie Elena</th>
-            </tr>
-            <tr>
-              <td><img alt="Pati"></img></td>
-              <td><img alt="Isa"></img></td>
-            </tr>
-            <tr>
-              <th>Sanchez Correa Carla Patricia</th>
-              <th>Tello Huaripata Keyko Isabel</th>
-            </tr>
-            <tr>
-              <td colSpan="2"><img alt="Andre"></img></td>
-            </tr>
-            <tr>
-              <th colSpan="2">Vargas Pérez Andrea</th>
-            </tr>
-            </tbody>
-          </table>
           <h3>URL de Github:</h3>
           <h3><a href="">link</a></h3>
         </div>
-      
-      <Footer/>      
+    </header>
+    <Footer/> 
     </div>
   );
 }

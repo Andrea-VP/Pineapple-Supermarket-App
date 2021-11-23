@@ -38,20 +38,21 @@ footer {
   }
   
   .footer__copyright{
-      background: rgb(54, 54, 54);;
+      background: #00A6ED;
       grid-column: 1/6;
-      text-align: left;
+      text-align: center;
+      align-items:center;
       font-size: 15px;
       color:whitesmoke;
       height: auto;
-      padding-left:20px;
+      padding:5px;
       grid-area:copyright;
   }
   
   .container_footer {
     padding: 0;
     width: 100%;
-    background: black;
+    background: #0D2C54;
     display: grid;
     grid-template-rows: 2fr 1fr;
     grid-template-areas: 
