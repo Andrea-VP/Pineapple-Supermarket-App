@@ -19,7 +19,7 @@ function ProductsA() {
       <header className="cont-products-viewer">
         <h1>Productos</h1>
             <div className="btns-admin">
-              <button className="openModalBtn" onClick={() => { setOpenModal1(true); }}>Añadir producto</button>
+              <a className="hover-btn"><button className="openModalBtn" onClick={() => { setOpenModal1(true); }}>Añadir producto</button></a>
               {openModal1 && <ModalAdd closeModal1={setOpenModal1} />}
               <button className="openModalBtn" onClick={() => { setOpenModal(true); }}>Editar producto</button>
               {openModal && <ModalEdit closeModal={setOpenModal} />}

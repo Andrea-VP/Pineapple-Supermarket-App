@@ -2,7 +2,8 @@ footer {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     padding: 0;
-    margin-bottom: -20px !important;
+    bottom: 0;
+    width: 100%;
   }
   
   .footer__logo{
@@ -38,7 +39,7 @@ footer {
   }
   
   .footer__copyright{
-      background: #00A6ED;
+      background: #1f2a2e;
       grid-column: 1/6;
       text-align: center;
       align-items:center;
@@ -90,5 +91,6 @@ footer {
       font-size: 10px;
       text-align:left;
       height: 40px;
+      color: whitesmoke;
     }
   }

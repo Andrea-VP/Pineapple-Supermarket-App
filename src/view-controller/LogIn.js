@@ -1,10 +1,16 @@
 //import logo from '../logo.svg';
 import './Login.css'
 import {send} from '../functions/functions'
+import NavbarProducts from '../Components/NavbarProducts';
+import Footer from '../Components/Footer';
+import Navbar from '../Components/Navbar';
 
 function LogIn() {
     return (
-    <div className="cont">
+      <div>
+      <Navbar/>
+      <div className="cont">
+      
       <header className="form">
        <h1>Iniciar Sesión</h1>
         <form>
@@ -17,6 +23,8 @@ function LogIn() {
 
         </form>
         </header>
+    </div>
+    <Footer/>
     </div>
   );
 }

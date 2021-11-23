@@ -64,7 +64,7 @@ function Home() {
             </div>
           </div>
           <h3 className="paddingtop">URL de Github:</h3>
-          <a href="https://github.com/caarenas97/Pineapple-Supermarket-App"><i class="fab fa-github"></i></a>
+          <a href="https://github.com/caarenas97/Pineapple-Supermarket-App"><i class="fab fa-github padding-bot"></i></a>
         </div>
     </header>
     <Footer/> 
