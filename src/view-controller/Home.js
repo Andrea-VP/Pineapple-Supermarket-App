@@ -9,6 +9,7 @@ function Home() {
       <Navbar />
       <header className="App-header">
         <h1>Pineapple Supermarket</h1>
+        <i class="fas fa-search"></i>
       </header>
       <body>
         <div>
@@ -42,7 +43,7 @@ function Home() {
           <h3><a href="">link</a></h3>
         </div>
       </body>
-      <Footer/>      
+      <Footer/>
     </div>
   );
 }
