@@ -2,6 +2,7 @@
 import './ProductsViewer.css';
 import {alphSort, numSort, exportXLS} from '../functions/functions'
 import NavbarProducts from '../Components/NavbarProducts';
+import Table from 'react-bootstrap/Table'
 import Footer from '../Components/Footer';
 
 function ProductsV() {
@@ -22,7 +23,8 @@ function ProductsV() {
             <button onClick={numSort} type="button">Precio</button>
           </div>
         <section className="table-products">
-          <table>
+          <Table responsive striped bordered hover>
+            <thead>
             <tr>
               <th>Nombre</th>
               <th>Categoría</th>
@@ -31,6 +33,8 @@ function ProductsV() {
               <th>Precio Unitario</th>
               <th>Imagen</th>
             </tr>
+            </thead>
+            <tbody>
             <tr>
               <td>Fideos</td>
               <td>Harinas</td>
@@ -39,9 +43,10 @@ function ProductsV() {
               <td>1 usd</td>
               <td><img alt="for sell"></img></td>
             </tr>
-          </table>
+            </tbody>
+          </Table>
         </section>
-          <button onClick={exportXLS} type="button" className="btn-exportar">Exportar .xls</button>
+        <button onClick={exportXLS} type="button" className="btn-exportar">Exportar .xls</button>
       </header>
       <Footer/> 
     </div>

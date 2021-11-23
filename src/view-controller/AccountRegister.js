@@ -1,14 +1,13 @@
 import './AccountRegister.css';
 import {create, edit, erase} from '../functions/functions'
-
-
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Table from 'react-bootstrap/Table'
 
 function AccountRegister() {
   return (
     <div className="">
       <header className="formRegister">
        <h1>Registrar</h1>
-
         <form>
           <div className="columns">
                 <div>
@@ -41,9 +40,8 @@ function AccountRegister() {
                   <p>Contraseña</p>
                   <input className="register" required type="password" name="password" id="password" />
                 </div>
-
-
           </div>
+
           <div className="btns">
             <button onClick={create} type="submit" className="btn-create">Crear</button>
             <button onClick={edit} type="submit" className="btn-edit">Editar</button>
@@ -51,29 +49,30 @@ function AccountRegister() {
           </div>
         </form>
       </header>
-     <div className="container">
-        <div class="row">
-          <table class="table table-responsive table-hover table-striped">
-            <tr>
-              <thead>
-              <th>Usuario</th>
-              <th>Fecha de creación</th>
-              </thead>
-            </tr>
-            <tr>
-              <td>John</td>
-              <td>15/11/2021</td>
-            </tr>
-            <tr>
-              <td>John</td>
-              <td>15/11/2021</td>
-            </tr>
-            <tr>
-              <td>John</td>
-              <td>15/11/2021</td>
-            </tr>
-          </table>
-        </div>
+          
+      <div class="container">
+          <Table  responsive striped bordered hover>
+            <thead>
+              <tr>
+                <th>Usuario</th>
+                <th>Fecha de Creación</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John</td>
+                <td>22/11/21</td>
+              </tr>
+              <tr>
+                <td>Jabob</td>
+                <td>23</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </Table>
       </div>
     </div>
   );

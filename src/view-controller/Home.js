@@ -1,6 +1,8 @@
 //import logo from '../logo.svg';
 import '../App.css';
 import Navbar from '../Components/Navbar';
+import Card from 'react-bootstrap/Card';
+import Image from 'react-bootstrap/Image';
 import Footer from '../Components/Footer';
 
 function Home() {
@@ -9,41 +11,67 @@ function Home() {
       <Navbar />
       <header className="App-header">
         <h1>Pineapple Supermarket</h1>
-        <i class="fas fa-search"></i>
+
       </header>
-      <body>
+
+
         <div>
           <h2>Web Devs' Rockstars</h2>
           <h3>Integrantes:</h3>
-          <table>
-            <tr>
-              <td><img alt="Erendi"></img></td>
-              <td><img alt="Mel"></img></td>
-            </tr>
-            <tr>
-              <th>García Vélez Iraís Eréndira</th>
-              <th>Roda López Melanie Elena</th>
-            </tr>
-            <tr>
-              <td><img alt="Pati"></img></td>
-              <td><img alt="Isa"></img></td>
-            </tr>
-            <tr>
-              <th>Sanchez Correa Carla Patricia</th>
-              <th>Tello Huaripata Keyko Isabel</th>
-            </tr>
-            <tr>
-              <td colSpan="2"><img alt="Andre"></img></td>
-            </tr>
-            <tr>
-              <th colSpan="2">Vargas Pérez Andrea</th>
-            </tr>
-          </table>
+          <div className="cont-team">
+            <div className="member">
+            <Card className="member-card" style={{ width: '18rem' }}>
+                <Image src="https://avatars.githubusercontent.com/u/91690704?v=4" roundedCircle />
+                <Card.Body>
+                  <Card.Title>García Vélez Iraís Eréndira</Card.Title>
+                  <a target="_blank" href="https://www.linkedin.com/in/erendira-garciav/"><i class="fab fa-linkedin"></i></a>
+                </Card.Body>
+              </Card>
+            </div>
+            <div className="member">
+              <Card className="member-card" style={{ width: '18rem' }}>
+                <Image src="https://avatars.githubusercontent.com/u/89095047?v=4" roundedCircle />
+                <Card.Body>
+                  <Card.Title>Roda López Melanie Elena</Card.Title>
+                  <a target="_blank" href="https://www.linkedin.com/in/Melanie-RodasLo"><i class="fab fa-linkedin"></i></a>
+                </Card.Body>
+              </Card>
+            </div>
+            <div className="member">
+              <Card className="member-card"style={{ width: '18rem' }}>
+                <Image src="https://avatars.githubusercontent.com/u/75837291?v=4" roundedCircle />
+                <Card.Body>
+                  <Card.Title>Sanchez Correa Carla Patricia</Card.Title>
+                  <a target="_blank" href="https://www.linkedin.com/in/carlasanchezcorrea/"><i class="fab fa-linkedin"></i></a>
+                </Card.Body>
+              </Card>
+            </div>
+            <div className="member">
+              <Card className="member-card" style={{ width: '18rem' }}>
+                <Image src="https://avatars.githubusercontent.com/u/53058216?v=4" roundedCircle />
+                <Card.Body>
+                  <Card.Title>Tello Huaripata Keyko Isabel</Card.Title>
+                  <a target="_blank" href="https://www.linkedin.com/in/isabel-tello-huaripata/"><i class="fab fa-linkedin"></i></a>
+                </Card.Body>
+              </Card>
+            </div>
+            <div className="member">
+              <Card className="member-card" style={{ width: '18rem' }}>
+                <Image src="https://avatars.githubusercontent.com/u/34204871?v=4" roundedCircle />
+                <Card.Body>
+                  <Card.Title>Vargas Pérez Andrea</Card.Title>
+                  <a target="_blank" href="https://www.linkedin.com/in/andrea-vargas-perez/"><i class="fab fa-linkedin"></i></a>
+                </Card.Body>
+              </Card>
+            </div>
+          </div>
           <h3>URL de Github:</h3>
           <h3><a href="">link</a></h3>
         </div>
-      </body>
+
+
       <Footer/>
+
     </div>
   );
 }
