@@ -11,10 +11,10 @@ function Home() {
       <Navbar />
       <header className="App-header">
         <div className="container__title">
-          <h1 className="tittle">Pineapple Supermarket</h1>
+          <h1 className="tittle">PINEAPPLE SUPERMARKET</h1>
         </div>
         <div>
-          <h2>Web Devs' Rockstars</h2>
+          <h2 className="padding">Web Devs' Rockstars</h2>
           <h3>Integrantes:</h3>
           <div className="cont-team">
             <div className="member">
@@ -63,7 +63,7 @@ function Home() {
               </Card>
             </div>
           </div>
-          <h3>URL de Github:</h3>
+          <h3 className="paddingtop">URL de Github:</h3>
           <a href="https://github.com/caarenas97/Pineapple-Supermarket-App"><i class="fab fa-github"></i></a>
         </div>
     </header>
