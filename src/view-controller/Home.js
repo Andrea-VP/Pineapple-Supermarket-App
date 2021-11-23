@@ -64,7 +64,7 @@ function Home() {
             </div>
           </div>
           <h3>URL de Github:</h3>
-          <h3><a href="">link</a></h3>
+          <a href="https://github.com/caarenas97/Pineapple-Supermarket-App"><i class="fab fa-github"></i></a>
         </div>
     </header>
     <Footer/> 

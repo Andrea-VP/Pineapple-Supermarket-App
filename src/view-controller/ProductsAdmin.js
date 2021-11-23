@@ -54,7 +54,7 @@ function ProductsA() {
             </tbody>
           </Table>
         </section>
-        <button onClick={exportXLS} type="button">Exportar .xls</button>
+        <button className="btn-exportar" onClick={exportXLS} type="button">Exportar .xls</button>
       </header>
       <Footer/> 
     </div>

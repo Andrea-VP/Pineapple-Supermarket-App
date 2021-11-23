@@ -45,3 +45,13 @@
   background: #7fb800;
 
 }
+
+.openModalBtn{
+  background: #F6511D;
+
+}
+
+.openModalBtn:hover{
+  box-shadow: 0 auto auto 0 rgba(0,0,0,0.2);
+}
+
