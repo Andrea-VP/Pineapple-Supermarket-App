@@ -31,8 +31,8 @@ function AccountRegister() {
                   <p>Rol</p>
                   <label size="">¿Rol Administrador?</label>
                   <select className="register" required size="" name="role">
-                    <option>true</option>
-                    <option>false</option>
+                    <option>SÍ</option>
+                    <option>NO</option>
                   </select>
                 </div>
 

@@ -8,15 +8,23 @@ import LogIn from './view-controller/LogIn'
 import ProductsV from './view-controller/ProductsViewer';
 import ProductsA from './view-controller/ProductsAdmin';
 import Home from './view-controller/Home';
+
+import PrivateRoute from './Components/PrivateRoute';
+
 function App() {
+
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={LogIn}/>
-        <Route exact path="/account" component={AccountRegister}></Route>
+        <Route exact path="/" component={LogIn}/>   
+        {/* <Route exact path="/account" component={AccountRegister}></Route> */}
+        <PrivateRoute exact path="/account" component={AccountRegister} />
+
+        <Route exact path="/home"component={Home}></Route>
         <Route exact path="/productsv"component={ProductsV}></Route>
         <Route exact path="/productsa"component={ProductsA}></Route>
         <Route exact path="/home"component={Home}></Route>
+
       </Switch>
     </Router>
   );
