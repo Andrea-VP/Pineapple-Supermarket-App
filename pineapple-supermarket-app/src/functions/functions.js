@@ -1,7 +1,8 @@
 import { createUser, signIn, editUser, deleteUser } from '../service/functions';
-import { createProduct } from '../service/product';
+import { createProduct, deleteProduct, editProduct } from '../service/product';
 
 var emailId
+export var dataProduct
 
 //#region -------------------------View AccountRegister
 
@@ -65,28 +66,24 @@ export function userValue(email,name, lastName, roles, password, username){
     if(roles === false){
         booleanValue = 'NO'
     }
-        input[0].value =name
-        input[1].value =lastName
+        input[0].value = name
+        input[1].value = lastName
         input[3].value = booleanValue
         input[2].value = username
         input[4].value = email
         input[5].value = password
 }
 
-export function deleteUserFront(){
-    deleteUser(emailId)
+export function deleteUserFront(id){
+    deleteUser(id)
 }
 //#endregion -------------------------FIN View AccountRegister
 
+//#region -------------------------View ProductsA
 
 export function createProducts(){
 
     let dataValue = document.querySelectorAll(".data")
-    
-    // "name": "Ham and-cheese sandwich",
-    // "price": "14",
-    // "image": "Ham-and-cheese-sandwich.jpg",
-    // "type": "burger"
 
     const data =  {
         name        : dataValue[0].value ,
@@ -99,6 +96,64 @@ export function createProducts(){
 
     createProduct(data)
 }
+
+export function productValue(id,name, category, price,quantity, description,image){
+
+    dataProduct = {
+        id,
+        name,
+        category,
+        description,
+        quantity,
+        price,
+        image
+    }
+
+    //return dataProduct
+}
+
+export function deleteProductFront(id){
+    deleteProduct(id)
+    window.location.reload()
+}
+
+export function editProductFront(id){
+    
+    let input = document.querySelectorAll(".productEdit")
+
+    const dataProduct =  {
+        name        : input[0].value,
+        category    : input[1].value,
+        description : input[2].value,
+        quantity    : input[3].value,
+        price       : input[4].value,
+        image       : input[5].value
+    }
+
+    editProduct(dataProduct, id)
+
+    window.location.reload()
+}
+
+//#endregion ----------------------FIN View ProductsA
+
+
+//vista ProductsViewer
+
+export function alphSort(){
+    console.log("Ordenando por nombre")
+}
+
+export function numSort(){
+    console.log("Ordenando por precio")
+}
+
+export function exportXLS(){
+    console.log("creando documento de excel")
+}
+
+
+
 
 // Vista log In
 export function send(decode,callback){
@@ -120,29 +175,6 @@ export function send(decode,callback){
         callback(decoded.roles.admin)
     })
 }
-
-export function erase (){
-    let input = document.querySelectorAll(".register")
-    input.forEach((i)=>{
-        console.log(i.value)
-    })
-}
-
-//vista ProductsViewer
-
-export function alphSort(){
-    console.log("Ordenando por nombre")
-}
-
-export function numSort(){
-    console.log("Ordenando por precio")
-}
-
-export function exportXLS(){
-    console.log("creando documento de excel")
-}
-
-
 
 
 

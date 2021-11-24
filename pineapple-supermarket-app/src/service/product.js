@@ -31,3 +31,36 @@ export const createProduct = async (data) => {
 
     return resp
 }
+
+export const deleteProduct = async (productId) => {
+    try {
+        const resp = await axios({
+            method: 'DELETE',
+            url: `${url}/products/${productId}`,
+            headers: {
+                Authorization: `Bearer ${token}`,
+                'Content-Type': 'application/json',
+            },
+          });
+        return resp;
+    } catch (error) {
+        return error
+    }
+}
+
+export const editProduct = async (objectEdit, productId) => {
+    try {
+        const resp = await axios({
+            method: 'PUT',
+            url: `${url}/products/${productId}`,
+            headers: {
+                Authorization: `Bearer ${token}`,
+                'Content-Type': 'application/json',
+            },
+            data:JSON.stringify(objectEdit),
+          });
+        return resp;
+    } catch (error) {
+        return error
+    }
+}

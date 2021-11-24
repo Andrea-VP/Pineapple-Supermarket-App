@@ -1,6 +1,6 @@
 //import logo from '../logo.svg';
 import './ProductsViewer.css';
-import {alphSort, numSort, exportXLS} from '../functions/functions'
+import {alphSort, numSort, exportXLS, productValue, deleteProductFront , dataProduct} from '../functions/functions'
 import React, { useState, useEffect } from 'react';
 import ModalAdd from "../Components/ModalAdd";
 import ModalEdit from "../Components/ModalEdit";
@@ -10,6 +10,13 @@ import Footer from '../Components/Footer';
 
 import { getProducts } from '../service/product';
 
+import decode from "jwt-decode";
+
+const getToken = localStorage.getItem('token')
+const decoded = decode(getToken);
+
+let auth;
+auth = decoded.roles.admin;
 
 function ProductsA(props) {
   const [openModal, setOpenModal] = useState(false);
@@ -25,17 +32,21 @@ function ProductsA(props) {
     fetchData()
   }, [props])
 
+  let date = 12
+
     return (
     <div className="">
       <NavbarProducts />
       <header className="cont-products-viewer">
         <h1>Productos</h1>
+          {auth ?
             <div className="btns-admin">
-              <a className="hover-btn"><button className="openModalBtn" onClick={() => { setOpenModal1(true); }}>Añadir producto</button></a>
-              {openModal1 && <ModalAdd closeModal1={setOpenModal1} />}
-              <button className="openModalBtn" onClick={() => { setOpenModal(true); }}>Editar producto</button>
-              {openModal && <ModalEdit closeModal={setOpenModal} />}
-            </div>
+            <a className="hover-btn"><button className="openModalBtn" onClick={() => { setOpenModal1(true); }}>Añadir producto</button></a>
+            {openModal1 && <ModalAdd closeModal1={setOpenModal1}/>}
+          </div>
+         :
+            <></>
+          }
             <input type="search" placeholder="Buscar" className="inputsearch"></input>
             <div className="btns-order">
               <label>Ordenar por:</label>
@@ -62,9 +73,20 @@ function ProductsA(props) {
                           <td>{e.description}</td>
                           <td>{e.quantity}</td>
                           <td>{e.price}</td>
-                          <td>{e.image}</td>
+                          <td><img alt={e.description} src={e.image} className="imageProduct"/></td>
                           <td>
-                            <i className="fas fa-edit"></i>
+                          {auth ?
+                            <div>
+                              <span onClick={() => { setOpenModal(true); }} >
+                                <span onClick={() => productValue(e._id,e.name,e.category,e.price,e.quantity,e.description,e.image)}>
+                                  <i className="fas fa-edit"></i>
+                                </span>
+                              </span>{openModal && <ModalEdit closeModal={setOpenModal}  data={dataProduct}/>}
+                              <i className="fas fa-trash" onClick={() => deleteProductFront(e._id)}></i>
+                           </div>
+                          :
+                            <></>
+                          }
                           </td>
                         </tr>
                   })}

@@ -56,11 +56,11 @@ function ModalAdd({ closeModal1 }) {
             <br/>
             <br/>
             {/*<button onClick={create} type="submit">Crear</button>  */}
-          </form>
           <div className="footer">
             <button onClick={() => closeModal1(false)} id="cancelBtn">Cancel</button>
-            <button onClick={createProducts}  id="añadirProduct">Añadir</button>
+            <button onClick={createProducts}  id="añadirProduct" type="submit">Añadir</button>
           </div>
+        </form>
        </div>
       </div>
     </div>

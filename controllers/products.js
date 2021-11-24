@@ -56,9 +56,6 @@ const updateProduct = async (req, res, next) => {
   try {
     let productId = req.params.productId;
     let update = req.body;
-    if (typeof update.price !== "number") {
-      return next(400);
-    }
 
     const productUpdate = await Product.findByIdAndUpdate(
       productId,
