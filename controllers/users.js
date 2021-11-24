@@ -25,112 +25,137 @@ const getUsers = async (req, res, next) => {
   } catch (error) {
     return next(404);
   }
-}; 
+}
 
 const saveUser = async (req, res, next) => {
-    try {
-      const { username, password, email, name ,lastName, roles } = req.body;
+  try {
+    const { username, password, email, name ,lastName, roles } = req.body;
 
-      const user = new User({
-        username: username,
-        password: password,
-        email: email,
-        name: name,
-        lastName: lastName,
-        roles: roles,
-      });
+    const user = new User({
+      username: username,
+      password: password,
+      email: email,
+      name: name,
+      lastName: lastName,
+      roles: roles,
+    });
 
-      if (!validEmail(email)) {
+    if (!validEmail(email)) {
+      return next(400);
+    }
+
+    if (!email || !password) {
+      return res.status(400).send({ message: "No hay email ni contraseña" });
+    }
+    if (password.length < 4) {
+      return res.status(400).send("Contraseña inválida");
+    }
+
+    const userValidated = User.findOne({ email: email });
+    userValidated.then((doc) => {
+      if (doc) {
+        return next(403);
+      }
+    });
+
+    const response = await user.save();
+    const finalResponse = await User.findOne({ email: response.email }).select(
+      "-password"
+    );
+    res.status(200).send(finalResponse);
+  } catch (error) {
+    return next('404');
+  }
+}
+
+const updateuser = async (req, res, next) => {
+  try {
+    const userId = req.params.uid;
+    const update = req.body;
+
+    let response = null;
+
+    if (validObjectId(userId)) {
+
+      if (!isAdmin(req) && req.decoded.id !== userId) {
+        return next(403);
+      }
+      if (isEmptyObj(user)) {
         return next(400);
       }
 
-      if (!email || !password) {
-        return res.status(400).send({ message: "No hay email ni contraseña" });
-      }
-      if (password.length < 4) {
-        return res.status(400).send("Contraseña inválida");
-      }
-  
-      const userValidated = User.findOne({ email: email });
-      userValidated.then((doc) => {
-        if (doc) {
-          return next(403);
-        }
-      });
-  
-      const response = await user.save();
-      const finalResponse = await User.findOne({ email: response.email }).select(
-        "-password"
+      response = User.findByIdAndUpdate(
+        userId,
+        { $set: update },
+        { new: true, useFindAndModify: false }
       );
-      res.status(200).send(finalResponse);
-    } catch (error) {
-      return next('404');
-    }
-  }
+      
+    } else {
+      if (isAdmin(req)) {
 
-  const updateuser = async (req, res, next) => {
-    try {
-      const userId = req.params.uid;
-      const update = req.body;
-  
-      let response = null;
-  
-      if (validObjectId(userId)) {
-
-        if (!isAdmin(req) && req.decoded.id !== userId) {
+        const validEmail = await User.findOne({ email: userId });
+        if (!validEmail) {
+          return next(404);
+        }
+      } else {
+        if (req.decoded.email !== userId) {
           return next(403);
         }
-        if (isEmptyObj(user)) {
-          return next(400);
+        if (req.decoded.email === userId && update.roles) {
+          return next(403);
         }
-
-        response = User.findByIdAndUpdate(
-          userId,
-          { $set: update },
-          { new: true, useFindAndModify: false }
-        );
-        
-      } else {
-        if (isAdmin(req)) {
-
-          const validEmail = await User.findOne({ email: userId });
-          if (!validEmail) {
-            return next(404);
-          }
-        } else {
-          if (req.decoded.email !== userId) {
-            return next(403);
-          }
-          if (req.decoded.email === userId && update.roles) {
-            return next(403);
-          }
-        }
-        if (isEmptyObj(update)) {
-          return next(400);
-        }
-  
-        response = await User.findOneAndUpdate(
-          { email: userId },
-          { $set: update },
-          { new: true, useFindAndModify: false }
-        );
+      }
+      if (isEmptyObj(update)) {
+        return next(400);
       }
 
-      if (!response) {
+      response = await User.findOneAndUpdate(
+        { email: userId },
+        { $set: update },
+        { new: true, useFindAndModify: false }
+      );
+    }
+
+    if (!response) {
+      return next(403);
+    }
+
+    return res.status(200).send(response);
+  } catch (error) {
+    next(404);
+  }
+}
+
+const deleteuser = async (req, res, next) => {
+  try {
+    let userId = req.params.uid;
+    let response = null;
+
+    // identificamos si el params es objectId o email
+    if (validObjectId(userId)) {
+      if (!isAdmin(req) && req.decoded.id !== userId) {
         return next(403);
       }
-  
-      return res.status(200).send(response);
-    } catch (error) {
-      next(404);
+      response = await User.findById(userId);
+    } else {
+      if (!isAdmin(req) && req.decoded.email !== userId) {
+        return next(403);
+      }
+      response = await User.findOne({ email: userId });
     }
+    response.remove();
+    if (!response) {
+      return next(404);
+    }
+    return res.status(200).send(response);
+  } catch (error) {
+    return next(404);
   }
-  
+}
 
 module.exports = {
-    // getUser,
-    getUsers,
-    saveUser,
-    // deleteuser,
-    updateuser,
-  }
+  getUsers,
+  saveUser,
+  deleteuser,
+  updateuser,
+}

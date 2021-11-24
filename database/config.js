@@ -10,9 +10,7 @@ const dbConnection = async() => {
             useUnifiedTopology: true,
             useCreateIndex: true,
         })
-
-
-
+        
     } catch(error) {
         throw new Error('Error a la hora de inicializar BD')
     }

@@ -1,26 +1,30 @@
 import React from "react";
 import './ModalAdd.css';
+import {createProducts} from '../functions/functions'
+function ModalAdd({ closeModal1 }) {
 
-function ModalAdd({ closeModal }) {
   return (
+
     <div className ="modalBackground">
       <div className="modalContainer">
-         <div className="titleCloseBtn">
-            <button onClick={() => closeModal(false)}> X </button>
-          </div>
-          <div className="title">
-           <h1>Añadir Producto</h1>
+          <div className="container__tittle">
+            <div className="titleCloseBtn">
+                <button onClick={() => closeModal1(false)}> X </button>
+            </div>
+            <div className="title">
+                <h1>Añadir Producto</h1>
+            </div>  
           </div>
           <div className="body">
           <form>
             <label>
               Nombre de Producto:
-              <input className="" required type="" name="" id=""/> 
+              <input className="data" required type="" name="" id=""/> 
             </label>
             <br/>
             <label>
               Categoría:
-              <select className="" required size="" name="">
+              <select className="data" required size="" name="">
                 <option>Frutas</option> 
                 <option>Verduras</option>
                 <option>Carnes</option>
@@ -32,30 +36,30 @@ function ModalAdd({ closeModal }) {
             <br/>
             <label> 
               Descripción:
-              <input className="" required type="" name="" id=""/> 
+              <input className="data" required type="" name="" id=""/> 
             </label>
             <br/>
             <label>
               Cantidad:
-              <input className="" required type="" name="" id=""/> 
+              <input className="data" required type="" name="" id=""/> 
             </label>
             <br/>
             <label>
               Precio por unidad:
-              <input className="" required type="" name="" id=""/> 
+              <input className="data" required type="" name="" id=""/> 
             </label>
             <br/>
             <label>
-              Subir Imagen:
-              <input className="" required type="file" name="" id=""/> 
+              Imagen(url):
+              <input className="data" required type="text" name="" id=""/> 
             </label>
             <br/>
             <br/>
             {/*<button onClick={create} type="submit">Crear</button>  */}
           </form>
           <div className="footer">
-            <button onClick={() => closeModal(false)} id="cancelBtn">Cancel</button>
-            <button>Añadir</button>
+            <button onClick={() => closeModal1(false)} id="cancelBtn">Cancel</button>
+            <button onClick={createProducts}  id="añadirProduct">Añadir</button>
           </div>
        </div>
       </div>

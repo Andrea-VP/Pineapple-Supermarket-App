@@ -60,7 +60,7 @@ function ModalEdit({ closeModal }) {
           </form>
           <div className="footer">
             <button onClick={() => closeModal(false)} id="cancelBtn">Cancel</button>
-            <button>Añadir</button>
+            <button >Añadir</button>
           </div>
        </div>
       </div>

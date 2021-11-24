@@ -4,8 +4,6 @@ const pkg = require('./package.json');
 
 const authMiddleware = require('./middleware/auth');
 
-
-
 const express = require("express");
 const  { dbConnection }  = require("./database/config");
 const routes = require('./routes');
@@ -40,12 +38,12 @@ app.use(authMiddleware(secret));
 
 
 routes(app, (err) => {
-    if (err) {
-      throw err;
-    }
+  if (err) {
+    throw err;
+  }
 
-    app.listen( port, function(){
-        console.log(`Express server is running on port ${port}`);
-    });
-    
+  app.listen( port, function(){
+      console.log(`Express server is running on port ${port}`);
+  });
+  
   });

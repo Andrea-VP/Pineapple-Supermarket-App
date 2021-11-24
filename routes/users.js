@@ -10,8 +10,7 @@ const {
 
 
 const {
-//   , getUser, deleteuser,  
-  saveUser, updateuser, getUsers,
+  deleteuser, saveUser, updateuser, getUsers,
 } = require('../controllers/users')
 
 const initAdminUser = (app, next) => {
@@ -55,14 +54,11 @@ module.exports = (app, next) => {
 
   app.get('/users', requireAdmin, getUsers);
 
-//   app.get('/users/:uid', requireAuth, getUser);
-
   app.post('/users',requireAdmin, saveUser);
-
 
   app.put('/users/:uid', requireAdmin, updateuser);
 
-//   app.delete('/users/:uid', requireAuth, deleteuser);
+  app.delete('/users/:uid', requireAuth, deleteuser);
 
   initAdminUser(app, next);
 };

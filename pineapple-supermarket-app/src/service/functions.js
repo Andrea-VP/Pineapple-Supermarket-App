@@ -39,7 +39,6 @@ export const editUser = async (objectEdit, userId) => {
     } catch (error) {
         return error
     }
-
 }
 
 export const createUser = async (data) => {
@@ -54,6 +53,22 @@ export const createUser = async (data) => {
     })
 
     return resp
+}
+
+export const deleteUser = async (userId) => {
+    try {
+        const resp = await axios({
+            method: 'DELETE',
+            url: `${url}/users/${userId}`,
+            headers: {
+                Authorization: `Bearer ${token}`,
+                'Content-Type': 'application/json',
+            },
+          });
+        return resp;
+    } catch (error) {
+        return error
+    }
 }
 
 export const signIn = async (data ) => {

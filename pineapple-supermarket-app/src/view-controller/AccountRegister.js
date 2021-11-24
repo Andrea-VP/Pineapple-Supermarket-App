@@ -1,5 +1,5 @@
 import './AccountRegister.css';
-import {create, edit, erase} from '../functions/functions'
+import {createUserFront, editUserFront, deleteUserFront, userValue} from '../functions/functions'
 
 import { getUsers } from '../service/functions'
 import { useState, useEffect } from 'react';
@@ -16,13 +16,12 @@ function AccountRegister(props) {
     }
     fetchData()
   }, [props])
-
   
   return (
     <div className="">
       <header className="formRegister">
        <h1>Registrar</h1>
-      <form>
+      <form autoComplete="new-password">
         <div className="columns">
           <div>
             <p>Nombres</p>
@@ -53,14 +52,14 @@ function AccountRegister(props) {
           </div>
           <div>
             <p>Contraseña</p>
-            <input className="register" required type="password" name="password" id="password" />
+            <input className="register" required type="password" name="password" id="password" autoComplete="new-password" />
           </div>
         </div>
         
         <div className="btns">
-          <button onClick={create} type="submit" className="btn-create">Crear</button>
-          <button onClick={edit} type="submit" className="btn-edit">Editar</button>
-          <button onClick={erase} type="submit" className="btn-delete">Eliminar</button>
+          <button onClick={()=>createUserFront()} type="submit" className="btn-create">Crear</button>
+          <button onClick={()=>editUserFront()} type="submit" className="btn-edit">Editar</button>
+          <button onClick={()=>deleteUserFront()} type="submit" className="btn-delete">Eliminar</button>
         </div>
       </form>
       </header>
@@ -68,21 +67,21 @@ function AccountRegister(props) {
       <div className="container">
         <div className="row">
           <table className="table table-responsive table-hover table-striped">
-          <tr>
-            <th>Username</th>
-            <th>Creation Date</th>
+            <tbody>
+            <tr>
+              <th>Username</th>
+              <th>Creation Date</th>
             </tr>
-
-        {!user ? 'Cargando...' : user.map((e, index) => {
-        return <tr>
-                <td>{e.username}</td>
-                <td>{e.dateEntry}</td>
-                <td>
-                  <i class="fas fa-edit"></i>
-                </td>
-
-              </tr>
-      })}
+            {!user ? 'Cargando...' : user.map((e, index) => {
+            return <tr key={index}>
+                    <td>{e.username}</td>
+                    <td>{e.dateEntry}</td>
+                    <td>
+                      <i className="fas fa-edit" onClick={() => userValue(e.email,e.name, e.lastName, e.roles.admin, e.password, e.username)}></i>
+                    </td>
+                  </tr>
+            })}
+          </tbody>
           </table>
         </div>
       </div>

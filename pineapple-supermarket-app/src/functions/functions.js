@@ -1,4 +1,104 @@
-import { createUser, signIn, editUser } from '../service/functions';
+import { createUser, signIn, editUser, deleteUser } from '../service/functions';
+import { createProduct } from '../service/product';
+
+var emailId
+
+//#region -------------------------View AccountRegister
+
+export function createUserFront(){ 
+    let booleanValue
+
+    let input = document.querySelectorAll(".register")
+
+    if(input[3].value === "SÍ"){
+        booleanValue = true
+    }
+    if(input[3].value === "NO"){
+        booleanValue = false
+    }
+
+    const data =  {
+        username    : input[2].value ,
+        password    : input[5].value , 
+        email       : input[4].value,
+        name        : input[0].value ,
+        lastName    : input[1].value,
+        roles       : {admin : booleanValue}
+    }
+
+    createUser(data)
+}
+
+export function editUserFront(){
+    let booleanValue
+    
+    let input = document.querySelectorAll(".register")
+
+    if(input[3].value === "SÍ"){
+        booleanValue = true
+    }
+    if(input[3].value === "NO"){
+        booleanValue = false
+    }
+
+    const data =  {
+        username    : input[2].value ,
+        password    : input[5].value , 
+        email       : input[4].value,
+        name        : input[0].value ,
+        lastName    : input[1].value,
+        roles       : {admin : booleanValue}
+    }
+
+    editUser(data, emailId)
+}
+
+export function userValue(email,name, lastName, roles, password, username){
+    emailId = email
+    
+    let booleanValue
+
+    let input = document.querySelectorAll(".register")
+    if(roles === true){
+        booleanValue = 'SÍ'
+    }
+    if(roles === false){
+        booleanValue = 'NO'
+    }
+        input[0].value =name
+        input[1].value =lastName
+        input[3].value = booleanValue
+        input[2].value = username
+        input[4].value = email
+        input[5].value = password
+}
+
+export function deleteUserFront(){
+    deleteUser(emailId)
+}
+//#endregion -------------------------FIN View AccountRegister
+
+
+export function createProducts(){
+
+    let dataValue = document.querySelectorAll(".data")
+    
+    // "name": "Ham and-cheese sandwich",
+    // "price": "14",
+    // "image": "Ham-and-cheese-sandwich.jpg",
+    // "type": "burger"
+
+    const data =  {
+        name        : dataValue[0].value ,
+        description : dataValue[2].value , 
+        price       : dataValue[4].value , 
+        image       : dataValue[5].value ,
+        category    : dataValue[1].value ,
+        quantity    : dataValue[3].value 
+    }
+
+    createProduct(data)
+}
 
 // Vista log In
 export function send(decode,callback){
@@ -21,63 +121,6 @@ export function send(decode,callback){
     })
 }
 
-//Vista AccountRegister
-export function create (e){ 
-
-    let booleanValue
-    
-    e.preventDefault()
-    let input = document.querySelectorAll(".register")
-
-    if(input[3].value === "SÍ"){
-        booleanValue = true
-    }
-    if(input[3].value === "NO"){
-        booleanValue = false
-    }
-
-    const data =  {
-        username    : input[2].value ,
-        password    : input[5].value , 
-        email       : input[4].value,
-        name        : input[0].value ,
-        lastName    : input[1].value,
-        roles       : {admin : booleanValue}
-    }
-
-    createUser(data)
-}
-
-export async function edit(props){
-    let booleanValue
-    
-    // e.preventDefault()
-    let input = document.querySelectorAll(".register")
-
-    if(input[3].value === "SÍ"){
-        booleanValue = true
-    }
-    if(input[3].value === "NO"){
-        booleanValue = false
-    }
-
-    const data =  {
-        username    : input[2].value ,
-        password    : input[5].value , 
-        email       : input[4].value,
-        name        : input[0].value ,
-        lastName    : input[1].value,
-        roles       : {admin : booleanValue}
-    }
-
-    let id = input[4].value
-
-    // editUser(data, id)
-
-
-    await editUser(data, id)
-}
-
 export function erase (){
     let input = document.querySelectorAll(".register")
     input.forEach((i)=>{
@@ -98,5 +141,8 @@ export function numSort(){
 export function exportXLS(){
     console.log("creando documento de excel")
 }
+
+
+
 
 
