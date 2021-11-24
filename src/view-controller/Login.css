@@ -14,7 +14,7 @@
   border-radius: 5px;
   color: #fff;
 }
-.form input{
+.form .input-login{
   display: block;
   margin: 25px 0;
   border-radius: 5px;
@@ -34,4 +34,16 @@
 .form button:hover{
 
   background: #3ab6eb;
+}
+.reset-pass{
+  color: #0D2C54;
+  text-decoration: underline;
+  text-align: center;
+  padding: 15px;
+}
+.reset-pass:hover{
+  color: whitesmoke;
+}
+.center-class{
+  text-align: center;
 }

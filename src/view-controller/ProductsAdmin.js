@@ -27,8 +27,8 @@ function ProductsA() {
             <input type="search" placeholder="Buscar" className="inputsearch"></input>
             <div className="btns-order">
               <label>Ordenar por:</label>
-              <button onClick={alphSort} type="button">Nombre</button>
-              <button onClick={numSort} type="button">Precio</button>
+              <button className="btns-nameprec" onClick={alphSort} type="button">Nombre</button>
+              <button className="btns-nameprec" onClick={numSort} type="button">Precio</button>
             </div>
           <section className="table-products">
           <Table  responsive striped bordered hover>
