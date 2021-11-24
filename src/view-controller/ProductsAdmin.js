@@ -19,7 +19,7 @@ function ProductsA() {
       <header className="cont-products-viewer">
         <h1>Productos</h1>
             <div className="btns-admin">
-              <button className="openModalBtn" onClick={() => { setOpenModal1(true); }}>Añadir producto</button>
+              <a className="hover-btn"><button className="openModalBtn" onClick={() => { setOpenModal1(true); }}>Añadir producto</button></a>
               {openModal1 && <ModalAdd closeModal1={setOpenModal1} />}
               <button className="openModalBtn" onClick={() => { setOpenModal(true); }}>Editar producto</button>
               {openModal && <ModalEdit closeModal={setOpenModal} />}
@@ -27,8 +27,8 @@ function ProductsA() {
             <input type="search" placeholder="Buscar" className="inputsearch"></input>
             <div className="btns-order">
               <label>Ordenar por:</label>
-              <button onClick={alphSort} type="button">Nombre</button>
-              <button onClick={numSort} type="button">Precio</button>
+              <button className="btns-nameprec" onClick={alphSort} type="button">Nombre</button>
+              <button className="btns-nameprec" onClick={numSort} type="button">Precio</button>
             </div>
           <section className="table-products">
           <Table  responsive striped bordered hover>

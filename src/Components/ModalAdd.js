@@ -1,6 +1,6 @@
 import React from "react";
 import './ModalAdd.css';
-
+import {prueba} from '../functions/functions'
 function ModalAdd({ closeModal1 }) {
   return (
     <div className ="modalBackground">
@@ -14,7 +14,7 @@ function ModalAdd({ closeModal1 }) {
             </div>  
           </div>
           <div className="body">
-          <form>
+          <form className="form-align">
             <label>
               Nombre de Producto:
               <input className="" required type="" name="" id=""/> 
@@ -57,7 +57,7 @@ function ModalAdd({ closeModal1 }) {
           </form>
           <div className="footer">
             <button onClick={() => closeModal1(false)} id="cancelBtn">Cancel</button>
-            <button>Añadir</button>
+            <button onClick={prueba}>Añadir</button>
           </div>
        </div>
       </div>

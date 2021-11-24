@@ -11,7 +11,7 @@
   }
   
   .modalContainer {
-    width: 650px;
+    width: 750px;
     height: auto;
     border-radius: 12px;
     background-color: white;
@@ -26,6 +26,12 @@
     flex-direction: row-reverse;
     background: #FFB400;
     width: 100%;
+  }
+
+  .form-align{
+    justify-content:left;
+    text-align:left;
+    padding: 10px 50px ;
   }
 
   .titleCloseBtn button {
@@ -43,6 +49,7 @@
   
   .editForm{
     display: flex;
+    padding: 10px;
   }
 
   .modalContainer .body {
@@ -75,4 +82,17 @@
   
   .modalContainer #cancelBtn {
     background-color: crimson;
+  }
+  .body-pass{
+    color:black;
+  }
+  .form-align p{
+    margin-right: 10px ;
+    margin-bottom: 0px;
+  }
+  .form-align input{
+    width: 200px;
+  }
+  .padding-bottom{
+    padding-bottom: 15px;
   }

@@ -1,22 +1,34 @@
 //import logo from '../logo.svg';
 import './Login.css'
 import {send} from '../functions/functions'
+import NavbarProducts from '../Components/NavbarProducts';
+import React, { useState } from 'react';
+import ModalResetPass from "../Components/ModalResetPass";
+import Footer from '../Components/Footer';
+import Navbar from '../Components/Navbar';
 
 function LogIn() {
+    const [openModal2, setOpenModal2] = useState(false);
     return (
-    <div className="cont">
+      <div>
+      <Navbar/>
+      <div className="cont">
+      
       <header className="form">
        <h1>Iniciar Sesión</h1>
-        <form>
-          <input required type="text" name="name" id="name" placeholder="Username"/>
+        <form className="center-class">
+          <input className="input-login" required type="text" name="name" id="name" placeholder="Username"/>
 
-          <input required type="password" name="password" id="password" placeholder="Password"/>
+          <input className="input-login" required type="password" name="password" id="password" placeholder="Password"/>
 
 
         <button onClick={send} type="submit">Ingresar</button>
-
+        <label className="reset-pass" onClick={() => { setOpenModal2(true); }}>Restablecer contraseña</label>
+        {openModal2 && <ModalResetPass closeModal2={setOpenModal2} />}
         </form>
         </header>
+    </div>
+    <Footer/>
     </div>
   );
 }

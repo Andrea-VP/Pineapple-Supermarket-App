@@ -42,6 +42,11 @@ function exportXLS(){
     console.log("creando documento de excel")
 }
 
+//ModalAdd
+function prueba(){
+    console.log("Se ha añadido el producto")
+}
+
 module.exports = {
-    send,create,edit,erase,alphSort, numSort, exportXLS
+    send,create,edit,erase,alphSort, numSort, exportXLS, prueba,
 }
