@@ -9,11 +9,13 @@ function Home() {
   return (
     <div className="App">
       <Navbar />
-      <header className="App-header">
-        <h1>Pineapple Supermarket</h1>
 
-      </header>
 
+
+
+        <div className="container__title">
+          <h1 className="tittle">Pineapple Supermarket</h1>
+        </div>
 
         <div>
           <h2>Web Devs' Rockstars</h2>

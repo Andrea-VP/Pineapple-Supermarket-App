@@ -12,7 +12,7 @@
   
   .modalContainer {
     width: 650px;
-    height: 500px;
+    height: auto;
     border-radius: 12px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -21,11 +21,13 @@
     padding: 25px;
   }
 
-  .titleCloseBtn {
+  .container__tittle{
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row-reverse;
+    background: #FFB400;
+    width: 100%;
   }
-  
+
   .titleCloseBtn button {
     background-color: transparent;
     border: none;
@@ -35,10 +37,8 @@
 
   
   .modalContainer .title {
-    display: inline-block;
-    text-align: center;
-    margin-top: 10px;
-    background: #FFB400;
+    align-self: self-end; 
+    padding: 0 20%;
   }
   
   .editForm{
@@ -49,7 +49,7 @@
     flex: 50%;
     justify-content: center;
     align-items: center;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     text-align: center;
     flex-direction: column;
   }

@@ -11,6 +11,7 @@ import Footer from '../Components/Footer';
 
 function ProductsA() {
   const [openModal, setOpenModal] = useState(false);
+  const [openModal1, setOpenModal1] = useState(false);
 
     return (
     <div className="">
@@ -18,8 +19,8 @@ function ProductsA() {
       <header className="cont-products-viewer">
         <h1>Productos</h1>
             <div className="btns-admin">
-              <button className="openModalBtn" onClick={() => { setOpenModal(true); }}>Añadir producto</button>
-              {openModal && <ModalAdd closeModal={setOpenModal} />}
+              <button className="openModalBtn" onClick={() => { setOpenModal1(true); }}>Añadir producto</button>
+              {openModal1 && <ModalAdd closeModal1={setOpenModal1} />}
               <button className="openModalBtn" onClick={() => { setOpenModal(true); }}>Editar producto</button>
               {openModal && <ModalEdit closeModal={setOpenModal} />}
             </div>
