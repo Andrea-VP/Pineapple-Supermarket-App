@@ -14,14 +14,16 @@ function ModalAdd({ closeModal1 }) {
             </div>  
           </div>
           <div className="body">
-          <form className="form-align">
+          <form className="form-align-add">
             <label>
               Nombre de Producto:
-              <input className="" required type="" name="" id=""/> 
             </label>
+            <input className="" required type="" name="" id=""/> 
+            
             <br/>
             <label>
               Categoría:
+            </label>
               <select className="" required size="" name="">
                 <option>Frutas</option> 
                 <option>Verduras</option>
@@ -30,35 +32,39 @@ function ModalAdd({ closeModal1 }) {
                 <option>Deporte</option>
                 <option>Harinas</option>   
               </select> 
-            </label>
             <br/>
             <label> 
               Descripción:
-              <input className="" required type="" name="" id=""/> 
             </label>
+            <input className="" required type="" name="" id=""/> 
+         
             <br/>
             <label>
               Cantidad:
-              <input className="" required type="" name="" id=""/> 
             </label>
+              <input className="" required type="" name="" id=""/> 
+            
             <br/>
             <label>
               Precio por unidad:
-              <input className="" required type="" name="" id=""/> 
             </label>
+              <input className="" required type="" name="" id=""/> 
+       
             <br/>
             <label>
               Subir Imagen:
-              <input className="" required type="file" name="" id=""/> 
             </label>
+              <input className="" required type="file" name="" id=""/> 
+            
             <br/>
             <br/>
             {/*<button onClick={create} type="submit">Crear</button>  */}
+            <div className="footer">
+              <button onClick={() => closeModal1(false)} id="cancelBtn">Cancel</button>
+              <button onClick={prueba}>Añadir</button>
+            </div>
           </form>
-          <div className="footer">
-            <button onClick={() => closeModal1(false)} id="cancelBtn">Cancel</button>
-            <button onClick={prueba}>Añadir</button>
-          </div>
+          
        </div>
       </div>
     </div>

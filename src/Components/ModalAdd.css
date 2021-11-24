@@ -11,7 +11,7 @@
   }
   
   .modalContainer {
-    width: 750px;
+    width: auto;
     height: auto;
     border-radius: 12px;
     background-color: white;
@@ -28,6 +28,10 @@
     width: 100%;
   }
 
+  .form-align-add label {
+    width:150px;
+    display: inline-block;
+  }
   .form-align{
     justify-content:left;
     text-align:left;
@@ -46,10 +50,24 @@
     align-self: self-end; 
     padding: 0 20%;
   }
+
+  .container-label{
+    width: 90%;
+  }
+  .container-label-img {
+    display: flex;
+  }
   
+  .container-label-img label {
+    width: 150px;
+  }
+
   .editForm{
     display: flex;
+    flex-direction: column;
     padding: 10px;
+    text-align: -webkit-auto;
+    padding: 0 8%;
   }
 
   .modalContainer .body {
@@ -59,6 +77,8 @@
     font-size: 1.5rem;
     text-align: center;
     flex-direction: column;
+    text-align: -webkit-auto;
+    padding: 0 8%;
   }
   
   .modalContainer .footer {
@@ -89,9 +109,11 @@
   .form-align p{
     margin-right: 10px ;
     margin-bottom: 0px;
+    font-size: 20px;
   }
-  .form-align input{
-    width: 200px;
+  .form-align .padding-bottom {
+    width: 400px;
+    margin: 10px 0;
   }
   .padding-bottom{
     padding-bottom: 15px;
