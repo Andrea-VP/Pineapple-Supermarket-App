@@ -19,13 +19,13 @@ function ModalResetPass({ closeModal2 }) {
               <input className="padding-bottom" required type="email" name="" id=""/> 
             <br/>
             <p>Ingresa tu nueva contraseña:</p>
-              <input required type="password" name="" id=""/> 
+              <input className="padding-bottom" required type="password" name="" id=""/> 
             <br/>
+            <div className="footer">
+              <button onClick={() => closeModal2(false)} id="cancelBtn">Cancel</button>
+              <button onClick={prueba}>Aceptar</button>
+            </div>
           </form>
-          <div className="footer">
-            <button onClick={() => closeModal2(false)} id="cancelBtn">Cancel</button>
-            <button onClick={prueba}>Aceptar</button>
-          </div>
        </div>
       </div>
     </div>
