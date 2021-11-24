@@ -1,0 +1,71 @@
+.modalBackground {
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0,.85);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modalContainer {
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .container__tittle{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background: #FFB400;
+    padding: 0 20px;
+  }
+
+
+  .titleCloseBtn button {
+    background-color: rgba(255,255,255,.3);
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    color: #000;
+  }
+  .titleCloseBtn button:hover{
+    background-color: rgba(255,255,255,.5);
+    color: #fff;
+  }
+  .modalContainer .btns button {
+    width: 150px;
+    height: 45px;
+    border: none;
+    background-color: #00A6ED;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .modalContainer .btns button:hover{
+    background: #49c6fc;
+  }
+  .modalContainer #cancelBtn {
+    background-color: crimson;
+  }
+  .modalContainer #cancelBtn:hover{
+    background-color: rgb(248, 78, 112);
+  }
+  .form-product{
+    margin: 20px 0;
+  }
+  .form-product input {
+    margin-top: 10px;
+  }
+  .form-product label{
+    width: 150px;
+    text-align: left;
+  }

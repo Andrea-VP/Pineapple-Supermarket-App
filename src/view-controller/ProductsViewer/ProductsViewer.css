@@ -51,16 +51,7 @@
   box-shadow: 0 auto auto 0 rgba(0,0,0,0.2);
 }
 
-.openModalBtn{
-  color: #0d2c54;
-  background: #F6511D;
 
-}
-
-.openModalBtn:hover{
-  color: whitesmoke;
-  box-shadow: 0 auto auto 0 rgba(0,0,0,0.2);
-}
 .btns-nameprec:hover{
   color: rgb(194, 194, 194);
 }

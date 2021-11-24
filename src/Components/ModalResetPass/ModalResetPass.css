@@ -1,0 +1,15 @@
+
+.form-reset-pass p {
+  padding: 5px;
+  margin: 0;
+}
+.form-reset-pass input{
+
+  display: inline-block;
+  margin: 0 15px 15px 15px;
+  width: 450px;
+  border-radius: 3px;
+}
+.form-reset-pass button{
+  margin: 10px 20px;
+}

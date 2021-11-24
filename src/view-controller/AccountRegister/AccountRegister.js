@@ -1,5 +1,5 @@
 import './AccountRegister.css';
-import {create, edit, erase} from '../functions/functions'
+import {create, edit, erase} from '../../functions/functions'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Table from 'react-bootstrap/Table'
 
@@ -8,7 +8,7 @@ function AccountRegister() {
     <div className="">
       <header className="formRegister">
        <h1>Registrar</h1>
-        <form>
+        <form className="form-account">
           <div className="columns">
                 <div>
                   <p>Nombres</p>
@@ -49,7 +49,7 @@ function AccountRegister() {
           </div>
         </form>
       </header>
-          
+
       <div className="container">
           <Table  responsive striped bordered hover>
             <thead>

@@ -1,5 +1,5 @@
 import React from "react";
-import './ModalAdd.css';
+import './ModalEdit.css';
 
 function ModalEdit({ closeModal }) {
   return (
@@ -11,44 +11,33 @@ function ModalEdit({ closeModal }) {
           </div>
           <div className="title">
               <h1>Editar Producto</h1>
-          </div>  
+          </div>
         </div>
         <div className="body">
-          <form className="editForm">
+          <form className="form-product">
             <div className="container-label-img">
               <div className="container-label">
-                  <label>
-                  Nombre de Producto:
-                  </label>
-                  <input className="" required type="" name="" id=""/> 
+                  <label>Nombre de Producto:</label>
+                  <input className="" required type="" name="" id=""/>
                   <br/>
-                  <label>
-                  Categoría:
-                  </label>
+                  <label>Categoría:</label>
                   <select className="" required size="" name="">
-                      <option>Frutas</option> 
+                      <option>Frutas</option>
                       <option>Verduras</option>
                       <option>Carnes</option>
                       <option>Lácteos</option>
                       <option>Deporte</option>
-                      <option>Harinas</option>   
-                  </select> 
-                  
+                      <option>Harinas</option>
+                  </select>
                   <br/>
-                  <label> 
-                  Descripción:
-                  <input className="" required type="" name="" id=""/> 
-                  </label>
+                  <label>Descripción</label>
+                  <input className="" required type="" name="" id=""/>
                   <br/>
-                  <label>
-                  Cantidad:
-                  <input className="" required type="" name="" id=""/> 
-                  </label>
+                  <label>Cantidad:</label>
+                  <input className="" required type="" name="" id=""/>
                   <br/>
-                  <label>
-                  Precio por unidad:
-                  <input className="" required type="" name="" id=""/> 
-                  </label>
+                  <label>Precio por unidad:</label>
+                  <input className="" required type="" name="" id=""/>
                   <br/>
                   <label>
                   Cambiar Imagen:
@@ -62,7 +51,7 @@ function ModalEdit({ closeModal }) {
                   <img src="" alt="aqui va la imagen"></img>
               </div>
             </div>
-            <div className="footer">
+            <div className="btns">
               <button onClick={() => closeModal(false)} id="cancelBtn">Cancel</button>
               <button>Editar</button>
             </div>
@@ -74,4 +63,3 @@ function ModalEdit({ closeModal }) {
 }
 
 export default ModalEdit;
-

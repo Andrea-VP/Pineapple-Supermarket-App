@@ -3,11 +3,11 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import AccountRegister from './view-controller/AccountRegister';
-import LogIn from './view-controller/LogIn'
-import ProductsV from './view-controller/ProductsViewer';
-import ProductsA from './view-controller/ProductsAdmin';
-import Home from './view-controller/Home';
+import AccountRegister from './view-controller/AccountRegister/AccountRegister';
+import LogIn from './view-controller/Login/LogIn'
+import ProductsV from './view-controller/ProductsViewer/ProductsViewer';
+import ProductsA from './view-controller/ProductsAdmin/ProductsAdmin';
+import Home from './view-controller/Home/Home';
 function App() {
   return (
     <Router>

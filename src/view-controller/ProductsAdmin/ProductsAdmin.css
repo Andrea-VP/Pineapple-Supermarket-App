@@ -1,0 +1,10 @@
+.openModalBtn{
+  color: #0d2c54;
+  background: #F6511D;
+
+}
+
+.openModalBtn:hover{
+  color: whitesmoke;
+  box-shadow: 0 auto auto 0 rgba(0,0,0,0.2);
+}

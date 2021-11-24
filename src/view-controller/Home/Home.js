@@ -1,23 +1,18 @@
 //import logo from '../logo.svg';
-import '../App.css';
-import Navbar from '../Components/Navbar';
+import './Home.css';
+import Navbar from '../../Components/NavBar/Navbar';
 import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image';
-import Footer from '../Components/Footer';
+import Footer from '../../Components/Footer/Footer';
 
 function Home() {
   return (
     <div className="App">
       <Navbar />
-
-
-
-
         <div className="container__title">
-          <h1 className="tittle">PINEAPPLE SUPERMARKET</h1>
+          <h1 className="title-page">PINEAPPLE SUPERMARKET</h1>
         </div>
-
-        <div>
+        <div className ="cont-title-team">
           <h2 className="padding">Web Devs' Rockstars</h2>
           <h3>Integrantes:</h3>
           <div className="cont-team">
@@ -71,7 +66,7 @@ function Home() {
 
 
           <h3 className="paddingtop">URL de Github:</h3>
-          <a href="https://github.com/caarenas97/Pineapple-Supermarket-App"><i class="fab fa-github padding-bot"></i></a>
+          <a href="https://github.com/caarenas97/Pineapple-Supermarket-App" target="_blank"><i class="fab fa-github padding-bot"></i></a>
 
         </div>
 

@@ -1,6 +1,6 @@
 import React from "react";
-import './ModalAdd.css';
-import {prueba} from '../functions/functions'
+import './ModalResetPass.css';
+import {prueba} from '../../functions/functions'
 function ModalResetPass({ closeModal2 }) {
   return (
     <div className ="modalBackground">
@@ -11,17 +11,17 @@ function ModalResetPass({ closeModal2 }) {
             </div>
             <div className="title">
                 <h1>Recuperar contraseña</h1>
-            </div>  
+            </div>
           </div>
           <div className="body-pass">
-          <form className="form-align">
+          <form className="form-reset-pass">
             <p>Correo:</p>
-              <input className="padding-bottom" required type="email" name="" id=""/> 
+              <input className="padding-bottom" required type="email" name="" id=""/>
             <br/>
             <p>Ingresa tu nueva contraseña:</p>
-              <input className="padding-bottom" required type="password" name="" id=""/> 
+              <input className="padding-bottom" required type="password" name="" id=""/>
             <br/>
-            <div className="footer">
+            <div className="btns">
               <button onClick={() => closeModal2(false)} id="cancelBtn">Cancel</button>
               <button onClick={prueba}>Aceptar</button>
             </div>
@@ -33,4 +33,3 @@ function ModalResetPass({ closeModal2 }) {
 }
 
 export default ModalResetPass;
-

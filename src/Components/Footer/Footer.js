@@ -11,12 +11,12 @@ const Footer = () => {
             <div className="footer__link2"><a></a></div>
             <div className="footer__link3"><a></a></div>
             <div className="footer__social">
-                <a href="https://github.com/caarenas97/Pineapple-Supermarket-App"><i className="fab fa-github" id="github-foot"></i></a>
+                <a href="https://github.com/caarenas97/Pineapple-Supermarket-App" target="_blank"><i className="fab fa-github" id="github-foot"></i></a>
             </div>
             <div class="footer__copyright">
                 © 2021 Copyright, All rights reserved
             </div>
-          </div>     
+          </div>
     </footer>
   );
 };

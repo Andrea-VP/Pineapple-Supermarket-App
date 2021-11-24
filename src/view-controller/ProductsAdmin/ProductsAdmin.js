@@ -1,12 +1,12 @@
 //import logo from '../logo.svg';
-import './ProductsViewer.css';
-import {alphSort, numSort, exportXLS} from '../functions/functions'
+import './ProductsAdmin.css';
+import {alphSort, numSort, exportXLS} from '../../functions/functions'
 import React, { useState } from 'react';
-import ModalAdd from "../Components/ModalAdd";
-import ModalEdit from "../Components/ModalEdit";
-import NavbarProducts from '../Components/NavbarProducts';
+import ModalAdd from "../../Components/ModalAddProduct/ModalAdd";
+import ModalEdit from "../../Components/ModalEditProduct/ModalEdit";
+import NavbarProducts from '../../Components/NavBarProducts/NavbarProducts';
 import Table from 'react-bootstrap/Table'
-import Footer from '../Components/Footer';
+import Footer from '../../Components/Footer/Footer';
 
 
 function ProductsA() {
@@ -56,7 +56,7 @@ function ProductsA() {
         </section>
         <button className="btn-exportar" onClick={exportXLS} type="button">Exportar .xls</button>
       </header>
-      <Footer/> 
+      <Footer/>
     </div>
   );
 }

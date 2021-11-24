@@ -3,44 +3,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   padding: 0;
 }
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-/*Title*/
-.tittle {
-  width:100%;
-  align-self:initial;
-  color: #0D2C54;
-  padding-top: 20px;
-  font-size: 100px;
-  font-family: 'Revalia', cursive;
-  animation-name: slidein;
-  animation-duration: 1s;
-}
-@keyframes slidein {
-  from {
-    transform: translateY(100%);
-  }
 
-  to {
-    transform: translateY(0%);
-  }
-}
-
-.container__title {
-  display:flex;
-  height: 600px;
-  width: 100%;
-  background-color:green ;
-  background-image: url('https://images.unsplash.com/photo-1471286274405-579f8d7132d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
-  background-position: bottom;
-  background-size: cover;
-}
 
 /*Modal Button*/
 .App .openModalBtn {
@@ -80,47 +44,4 @@ body {
   to {
     transform: rotate(360deg);
   }
-}
-.cont-team{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.member{
-  width:400px; 
-  margin: 15px;
-  text-align: center;
-}
-.member-card{
-  margin: 0 auto;
-  height: 390px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  }
-i{
-  color: #0D2C54;
-  font-size: 30px;
-  transition: all 0.5s linear;
-}
-i:hover{
-  color: #00A6ED;
-  box-shadow: 0 auto auto 0 rgba(0,0,0,0.2);
-}
-#github-foot{
-  color: whitesmoke;
-}
-.paddingtop{
-  padding-top: 5rem;
-}
-.padding{
-  padding: 4rem;
-}
-.padding-bot{
-  padding-bottom: 4rem;
-  color: black;
-}
-.padding-bot:hover{
-  color: purple;
 }

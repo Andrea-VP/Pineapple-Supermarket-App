@@ -1,11 +1,11 @@
 //import logo from '../logo.svg';
 import './Login.css'
-import {send} from '../functions/functions'
-import NavbarProducts from '../Components/NavbarProducts';
+import {send} from '../../functions/functions'
+import NavbarProducts from '../../Components/NavBarProducts/NavbarProducts';
 import React, { useState } from 'react';
-import ModalResetPass from "../Components/ModalResetPass";
-import Footer from '../Components/Footer';
-import Navbar from '../Components/Navbar';
+import ModalResetPass from "../../Components/ModalResetPass/ModalResetPass";
+import Footer from '../../Components/Footer/Footer';
+import Navbar from '../../Components/NavBar/Navbar';
 
 function LogIn() {
     const [openModal2, setOpenModal2] = useState(false);
@@ -13,7 +13,7 @@ function LogIn() {
       <div>
       <Navbar/>
       <div className="cont">
-      
+
       <header className="form">
        <h1>Iniciar Sesión</h1>
         <form className="center-class">

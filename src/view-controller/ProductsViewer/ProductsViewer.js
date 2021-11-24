@@ -1,9 +1,9 @@
 //import logo from '../logo.svg';
 import './ProductsViewer.css';
-import {alphSort, numSort, exportXLS} from '../functions/functions'
-import NavbarProducts from '../Components/NavbarProducts';
+import {alphSort, numSort, exportXLS} from '../../functions/functions'
+import NavbarProducts from '../../Components/NavBarProducts/NavbarProducts';
 import Table from 'react-bootstrap/Table'
-import Footer from '../Components/Footer';
+import Footer from '../../Components/Footer/Footer';
 
 function ProductsV() {
     return (
@@ -48,7 +48,7 @@ function ProductsV() {
         </section>
         <button onClick={exportXLS} type="button" className="btn-exportar">Exportar .xls</button>
       </header>
-      <Footer/> 
+      <Footer/>
     </div>
   );
 }
