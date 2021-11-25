@@ -6,11 +6,11 @@
 
 ## Integrantes:
     
-    (García Vélez Iraís Eréndira)[https://www.linkedin.com/in/erendira-garciav/]
-    (Rodas López Melanie Elena)[https://www.linkedin.com/in/Melanie-RodasLo]
-    (Sanchez Correa Carla Patricia)[https://www.linkedin.com/in/carlasanchezcorrea/]
-    (Tello Huaripata Keyko Isabel)[https://www.linkedin.com/in/isabel-tello-huaripata/]
-    (Vargas Pérez Andrea)[https://www.linkedin.com/in/andrea-vargas-perez/]
+    [García Vélez Iraís Eréndira](https://www.linkedin.com/in/erendira-garciav/)
+    [Rodas López Melanie Elena](https://www.linkedin.com/in/Melanie-RodasLo)
+    [Correa Carla Patricia](https://www.linkedin.com/in/carlasanchezcorrea/Sanchez)
+    [Huaripata Keyko Isabel](https://www.linkedin.com/in/isabel-tello-huaripata/Tello )
+    [Vargas Pérez Andrea](https://www.linkedin.com/in/andrea-vargas-perez/)
 
 ## Descripción:
     
