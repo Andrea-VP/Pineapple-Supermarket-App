@@ -30,7 +30,7 @@ function Home() {
               <Card className="member-card" style={{ width: '18rem' }}>
                 <Image src="https://avatars.githubusercontent.com/u/89095047?v=4" roundedCircle /> 
                 <Card.Body>
-                  <Card.Title>Roda López Melanie Elena</Card.Title>
+                  <Card.Title>Rodas López Melanie Elena</Card.Title>
                   <a target="_blank" href="https://www.linkedin.com/in/Melanie-RodasLo"><i class="fab fa-linkedin"></i></a>
                 </Card.Body>
               </Card>
