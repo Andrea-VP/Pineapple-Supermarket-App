@@ -36,6 +36,7 @@ Esta página es visible solo para usuarios administradores y permite la administ
 ### Login 
 
  Para acceder a cualquiera de las páginas (con excepción de Home) los usuarios deberán autenticarse con su usuario y su contraseña a través de la página de inicio de sesión Logín/Logout.
+![Login-Pineapple_](https://user-images.githubusercontent.com/89095047/143374359-4673ee53-0d8f-4c7f-a897-c27db65ba538.png)
 
 ## Tecnologías
 
