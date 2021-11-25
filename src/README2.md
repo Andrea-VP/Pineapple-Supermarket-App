@@ -23,6 +23,7 @@ Este proyecto es una propuesta solución para John Smith presidente del supermer
 ### Home
 
 Página informativa inicial que muestra la identidad visual elegida por el equipo. 
+![Home-Pineapple](https://user-images.githubusercontent.com/89095047/143374206-76f41483-9172-4f2a-b207-7e214c39a194.png)
 
 ### Products
 
