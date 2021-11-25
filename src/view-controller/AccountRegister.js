@@ -2,10 +2,14 @@ import './AccountRegister.css';
 import {create, edit, erase} from '../functions/functions'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Table from 'react-bootstrap/Table'
+import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
+
 
 function AccountRegister() {
   return (
     <div className="">
+      <Navbar />
       <header className="formRegister">
        <h1>Registrar</h1>
         <form>
@@ -74,6 +78,7 @@ function AccountRegister() {
             </tbody>
           </Table>
       </div>
+      <Footer/> 
     </div>
   );
 }
