@@ -165,12 +165,12 @@ export function send(decode,callback){
     let email = document.querySelector("#name")
     let password = document.querySelector("#password")
 
-    const data =  {
-        email       : email.value ,
-        password    : password.value , 
-    }
+    // const data =  {
+    //     email       : email.value ,
+    //     password    : password.value , 
+    // }
 
-    signIn(data).then((res)=>{ 
+    signIn(email.value,password.value).then((res)=>{ 
 
         localStorage.setItem('token', res.data.token)
         localStorage.setItem('key', email.value)
