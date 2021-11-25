@@ -5,12 +5,14 @@
     Web Devs' Rockstars
 
 ## Integrantes:
-    
-    (García Vélez Iraís Eréndira)[https://www.linkedin.com/in/erendira-garciav/]
-    (Rodas López Melanie Elena)[https://www.linkedin.com/in/Melanie-RodasLo]
-    (Sanchez Correa Carla Patricia)[https://www.linkedin.com/in/carlasanchezcorrea/]
-    (Tello Huaripata Keyko Isabel)[https://www.linkedin.com/in/isabel-tello-huaripata/]
-    (Vargas Pérez Andrea)[https://www.linkedin.com/in/andrea-vargas-perez/]
+
+<ul>
+  <li> [García Vélez Iraís Eréndira] (https://www.linkedin.com/in/erendira-garciav) </li>
+  <li> [Rodas López Melanie Elena] (https://www.linkedin.com/in/Melanie-RodasLo) </li>
+  <li> [Sanchez Correa Carla Patricia] (https://www.linkedin.com/in/carlasanchezcorrea) </li>
+  <li> [Huaripata Keyko Isabel] (https://www.linkedin.com/in/isabel-tello-huaripata/) </li>
+  <li> [Vargas Pérez Andrea] (https://www.linkedin.com/in/andrea-vargas-perez/) </li>
+</ul>
 
 ## Descripción:
     
@@ -21,6 +23,7 @@ Este proyecto es una propuesta solución para John Smith presidente del supermer
 ### Home
 
 Página informativa inicial que muestra la identidad visual elegida por el equipo. 
+![Home-Pineapple](https://user-images.githubusercontent.com/89095047/143374206-76f41483-9172-4f2a-b207-7e214c39a194.png)
 
 ### Products
 
@@ -33,17 +36,21 @@ Esta página es visible solo para usuarios administradores y permite la administ
 ### Login 
 
  Para acceder a cualquiera de las páginas (con excepción de Home) los usuarios deberán autenticarse con su usuario y su contraseña a través de la página de inicio de sesión Logín/Logout.
+![Login-Pineapple_](https://user-images.githubusercontent.com/89095047/143374359-4673ee53-0d8f-4c7f-a897-c27db65ba538.png)
 
-### Tecnologías
+## Tecnologías
 
 La solución se ha desarrollado utilizando las siguientes tecnologías:
-•	Javascript
-•	Express para manejar el Backend 
-•	Mongo para la base de datos 
-•	GitHub para el versionamiento del código.
-•	JUnit para pruebas unitarias.
-•	React como framework Front-end.
-•	Aplicación en internet/nube (Heroku)
+<ul>
+    <li>Javascript</li>
+    <li>Express para manejar el Backend </li>
+    <li>Mongo para la base de datos </li>
+    <li>GitHub para el versionamiento del código.</li>
+    <li>JUnit para pruebas unitarias.</li>
+    <li>React como framework Front-end.</li>
+    <li>Aplicación en internet/nube (Heroku)</li>
+</ul>
+
 
 
 
