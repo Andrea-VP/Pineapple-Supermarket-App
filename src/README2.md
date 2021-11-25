@@ -41,13 +41,15 @@ Esta página es visible solo para usuarios administradores y permite la administ
 La solución se ha desarrollado utilizando las siguientes tecnologías:
 <ul>
     <li>Javascript</li>
-    </li>Express para manejar el Backend </li>
-    </li>Mongo para la base de datos </li>
-    </li>GitHub para el versionamiento del código.</li>
-    </li>JUnit para pruebas unitarias.</li>
-    </li>React como framework Front-end.</li>
-    </li>Aplicación en internet/nube (Heroku)</li>
+    <li>Express para manejar el Backend </li>
+    <li>Mongo para la base de datos </li>
+    <li>GitHub para el versionamiento del código.</li>
+    <li>JUnit para pruebas unitarias.</li>
+    <li>React como framework Front-end.</li>
+    <li>Aplicación en internet/nube (Heroku)</li>
 </ul>
+
+
 
 
 
