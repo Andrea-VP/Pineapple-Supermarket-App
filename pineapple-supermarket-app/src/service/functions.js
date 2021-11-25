@@ -71,28 +71,28 @@ export const deleteUser = async (userId) => {
     }
 }
 
-// export const signIn = async (data ) => {
-//     const resp = await axios({
-//         method: "POST",
-//         url: `${url}/auth`,
-//         data,
-//     })
-
-//     return resp
-// }
-
-
-export const signIn = async (email, password) => {
-    const response = await axios(`${url}/auth`, {
-        method: 'POST',
-        body:
-            JSON.stringify
-                ({
-                    email,
-                    password
-                }),
-        headers: { 'Content-Type': 'application/json' }
+export const signIn = async (data ) => {
+    const resp = await axios({
+        method: "POST",
+        url: `${url}/auth`,
+        data,
     })
-     return response
 
+    return resp
 }
+
+
+// export const signIn = async (email, password) => {
+//     const response = await axios(`${url}/auth`, {
+//         method: 'POST',
+//         body:
+//             JSON.stringify
+//                 ({
+//                     email,
+//                     password
+//                 }),
+//         headers: { 'Content-Type': 'application/json' }
+//     })
+//      return response
+
+// }

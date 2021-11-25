@@ -1,1 +1,1 @@
-export const url= 'https://git.heroku.com/pineapple-supermarket-app.git';
+export const url= 'http://localhost:4000';
