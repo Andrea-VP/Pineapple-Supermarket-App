@@ -50,15 +50,3 @@ La solución se ha desarrollado utilizando las siguientes tecnologías:
     <li>React como framework Front-end.</li>
     <li>Aplicación en internet/nube (Heroku)</li>
 </ul>
-
-
-
-
-
-
-
-
-
-
-
-
