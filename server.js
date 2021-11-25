@@ -8,10 +8,16 @@ const express = require("express");
 const  { dbConnection }  = require("./database/config");
 const routes = require('./routes');
 const app = express();
-const cors = require('cors')
 const { port, portFE, secret } = config;
 
-app.use(cors());
+const cors=require("cors");
+const corsOptions ={
+   origin:'*', 
+   credentials:true,            //access-control-allow-credentials:true
+   optionSuccessStatus:200,
+}
+
+app.use(cors(corsOptions)) // Use this after the variable declaration
 
 app.set('config', config);
 app.set('pkg', pkg);
