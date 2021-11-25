@@ -5,12 +5,11 @@
     Web Devs' Rockstars
 
 ## Integrantes:
-    
-    [García Vélez Iraís Eréndira](https://www.linkedin.com/in/erendira-garciav/)
-    [Rodas López Melanie Elena](https://www.linkedin.com/in/Melanie-RodasLo)
-    [Correa Carla Patricia](https://www.linkedin.com/in/carlasanchezcorrea/Sanchez)
-    [Huaripata Keyko Isabel](https://www.linkedin.com/in/isabel-tello-huaripata/Tello )
-    [Vargas Pérez Andrea](https://www.linkedin.com/in/andrea-vargas-perez/)
+[García Vélez Iraís Eréndira](https://www.linkedin.com/in/erendira-garciav)
+[Rodas López Melanie Elena](https://www.linkedin.com/in/Melanie-RodasLo)
+[Correa Carla Patricia](https://www.linkedin.com/in/carlasanchezcorrea/Sanchez)
+[Huaripata Keyko Isabel](https://www.linkedin.com/in/isabel-tello-huaripata/Tello)
+[Vargas Pérez Andrea](https://www.linkedin.com/in/andrea-vargas-perez/)
 
 ## Descripción:
     
