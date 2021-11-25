@@ -69,12 +69,27 @@ function AccountRegister(props) {
           <table className="table table-responsive table-hover table-striped">
             <tbody>
             <tr>
-              <th>Username</th>
-              <th>Creation Date</th>
+              <th>Usuario</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Email</th>
+              <th>Rol</th>
+              <th>Fecha de Creación</th>
             </tr>
             {!user ? 'Cargando...' : user.map((e, index) => {
+              var userRol 
+                if(e.roles.admin === true){
+                  userRol = 'Administrador'
+                }
+                if(e.roles.admin === false){
+                  userRol = 'Usuarios Regular'
+                }
             return <tr key={index}>
                     <td>{e.username}</td>
+                    <td>{e.name}</td>
+                    <td>{e.lastName}</td>
+                    <td>{e.email}</td>
+                    <td>{userRol}</td>
                     <td>{e.dateEntry}</td>
                     <td>
                       <i className="fas fa-edit" onClick={() => userValue(e.email,e.name, e.lastName, e.roles.admin, e.password, e.username)}></i>

@@ -74,8 +74,8 @@ export function userValue(email,name, lastName, roles, password, username){
         input[5].value = password
 }
 
-export function deleteUserFront(id){
-    deleteUser(id)
+export function deleteUserFront(){
+    deleteUser(emailId)
 }
 //#endregion -------------------------FIN View AccountRegister
 
@@ -141,7 +141,12 @@ export function editProductFront(id){
 //vista ProductsViewer
 
 export function alphSort(){
-    console.log("Ordenando por nombre")
+
+    const productNameArray = document.querySelector("#productNameArray")
+    console.log(productNameArray.textContent)
+
+    // productNameArray.sort()
+
 }
 
 export function numSort(){

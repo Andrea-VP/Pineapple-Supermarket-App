@@ -51,7 +51,7 @@ function ModalAdd({ closeModal1 }) {
             <br/>
             <label>
               Imagen(url):
-              <input className="data" required type="text" name="" id=""/> 
+              <input className="data" type="text" name="" id=""/> 
             </label>
             <br/>
             <br/>

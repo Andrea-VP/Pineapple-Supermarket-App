@@ -8,21 +8,41 @@ import NavbarProducts from '../Components/NavbarProducts';
 import Table from 'react-bootstrap/Table'
 import Footer from '../Components/Footer';
 
+
 import { getProducts } from '../service/product';
 
 import decode from "jwt-decode";
 
+import ExportExcel from 'react-export-excel';
+
+const ExcelFile = ExportExcel.ExcelFile;
+const ExcelSheet = ExportExcel.ExcelFile;
+const ExcelColumn = ExportExcel.ExcelFile;
+
+
+
 const getToken = localStorage.getItem('token')
-const decoded = decode(getToken);
 
 let auth;
-auth = decoded.roles.admin;
+
+if(!getToken){
+    auth= null
+
+}else {
+    const decoded = decode(getToken);
+
+    auth = decoded.roles.admin;
+}
+
 
 function ProductsA(props) {
   const [openModal, setOpenModal] = useState(false);
   const [openModal1, setOpenModal1] = useState(false);
 
   const [product, setProduct] = useState([]);
+
+
+
   
   useEffect(() => {
     async function fetchData () {
@@ -32,7 +52,10 @@ function ProductsA(props) {
     fetchData()
   }, [props])
 
-  let date = 12
+
+
+  
+
 
     return (
     <div className="">
@@ -50,8 +73,17 @@ function ProductsA(props) {
             <input type="search" placeholder="Buscar" className="inputsearch"></input>
             <div className="btns-order">
               <label>Ordenar por:</label>
-              <button onClick={alphSort} type="button">Nombre</button>
-              <button onClick={numSort} type="button">Precio</button>
+                <select name="order" id="select-letter" >
+                  <option value="" disabled selected >Nombre</option>
+                  <option value="orderAZ" >A-Z</option>
+                  <option value="orderZA" >Z-A</option>
+                </select>
+                <label>Ordenar por:</label>
+                <select name="order" id="select-letter" >
+                  <option value="" disabled selected >Precio</option>
+                  <option value="higher" >Mayor-menor</option>
+                  <option value="low" >Menor-mayor</option>
+                </select>
             </div>
           <section className="table-products">
             <div className="container">
@@ -67,8 +99,8 @@ function ProductsA(props) {
                     <th>Imagen</th>
                   </tr>
                   {!product ? 'Cargando...' : product.map((e, index) => {
-                  return <tr key={index}>
-                          <td>{e.name}</td>
+                  return <tr key={index} id='tableProduct'>
+                          <td id="productNameArray">{e.name}</td>
                           <td>{e.category}</td>
                           <td>{e.description}</td>
                           <td>{e.quantity}</td>
@@ -95,7 +127,19 @@ function ProductsA(props) {
               </div>
             </div>
         </section>
-        <button className="btn-exportar" onClick={exportXLS} type="button">Exportar .xls</button>
+        <ExcelFile element={<button className="btn-exportar" onClick={exportXLS} type="button">Exportar .xls</button>} filename='Proctucs Export'>
+          <ExcelSheet data={product} name="Product">
+            <ExcelColumn label="Nombre del Producto" value='name'/>
+            <ExcelColumn label="Categoría" value='category'/>
+            <ExcelColumn label="Descripción	" value='description'/>
+            <ExcelColumn label="Cantidad" value='quantity'/>
+            <ExcelColumn label="Precio Unitario" value='price'/>
+            <ExcelColumn label="Url Imagen" value='image'/>
+
+
+
+          </ExcelSheet>
+        </ExcelFile>
       </header>
       <Footer/> 
     </div>
