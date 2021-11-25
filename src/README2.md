@@ -36,17 +36,18 @@ Esta página es visible solo para usuarios administradores y permite la administ
 
  Para acceder a cualquiera de las páginas (con excepción de Home) los usuarios deberán autenticarse con su usuario y su contraseña a través de la página de inicio de sesión Logín/Logout.
 
-### Tecnologías
+## Tecnologías
 
 La solución se ha desarrollado utilizando las siguientes tecnologías:
-•	Javascript
-•	Express para manejar el Backend 
-•	Mongo para la base de datos 
-•	GitHub para el versionamiento del código.
-•	JUnit para pruebas unitarias.
-•	React como framework Front-end.
-•	Aplicación en internet/nube (Heroku)
-
+<ul>
+    <li>Javascript
+    </li>Express para manejar el Backend </li>
+    </li>Mongo para la base de datos </li>
+    </li>GitHub para el versionamiento del código.</li>
+    </li>JUnit para pruebas unitarias.</li>
+    </li>React como framework Front-end.</li>
+    </li>Aplicación en internet/nube (Heroku)</li>
+</ul>
 
 
 
