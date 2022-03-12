@@ -1,3 +1,7 @@
+# IBM WINNING WOMAN PROGRAM
+
+Preparing for an entry level job on web development
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
